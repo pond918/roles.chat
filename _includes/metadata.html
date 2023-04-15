@@ -17,37 +17,37 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>
     {%- if site.title == "blank" -%}
         {%- capture title -%}{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}{%- endcapture -%}
     {%- else -%}
         {%- capture title -%}{{ site.title }}{%- endcapture -%}
     {%- endif -%}
     {% if page.url == '/' %}
-        {% t page.title %}
+        {%- capture title -%}{% t page.title %}{%- endcapture -%}
     {%- elsif page.url == '/blog/index.html' %}
-        {% t titles.blog %} | {{ title }}
+        {%- capture title -%}{% t titles.blog %} | {{ title }}{%- endcapture -%}
     {% elsif page.url contains '/blog/' %}
         {%- capture blog_year -%}{{ page.url | slice: 0, 11 }}{%- endcapture -%}
         {%- if page.url == blog_year -%}
-            {{ page.date | date: "%Y" }} | {{ title }}
+            {%- capture title -%}{{ page.date | date: "%Y" }} | {{ title }}{%- endcapture -%}
         {%- else -%}
-            {{ page.title }} | {{ title }}
+            {%- capture title -%}{{ page.title }} | {{ title }}{%- endcapture -%}
         {%- endif -%}
     {%- elsif page.title != "blank" and page.url != "/" -%}
         {%- if page.title == nil or page.title == "" -%}
-            {{ page.date | date: "%Y" }} | {{ title }}
+            {%- capture title -%}{{ page.date | date: "%Y" }} | {{ title }}{%- endcapture -%}
         {%- elsif page.title contains 'Announcement' -%}
-            {{ page.title }} | {{ title }}
+            {%- capture title -%}{{ page.title }} | {{ title }}{%- endcapture -%}
         {%- else -%}
-            {% t page.title %} | {{ title }}
+            {%- capture title -%}{% t page.title %} | {{ title }}{%- endcapture -%}
         {%- endif -%}
     {%- else -%}
-        {{ title }}
+        {%- capture title -%}{{ title }}{%- endcapture -%}
     {%- endif -%}
-    </title>
-    <meta name="author" content="{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}" />
-    <meta name="description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{% t main.description %}{%- endif -%}" />
+    <title>{{ title }}</title>
+    <meta name="author" content="{{ page.author | site.author }}" />
+    {%- capture description -%}{%- if page.description -%}{{ page.description }}{%- elsif page.url == '/' -%}{% t descriptions.index %}{%- else -%}{% t main.description %}{%- endif -%}{%- endcapture -%}
+    <meta name="description" content="{{ description }}" />
 {%- if page.keywords or main.keywords %}
     <meta name="keywords" content="{%- if page.keywords -%}{{ page.keywords }}{%- else -%}{% t main.keywords %}{%- endif -%}" />
 {%- endif %}
@@ -55,11 +55,11 @@
 {%- if site.serve_og_meta %}
 
     <!-- OpenGraph -->
-    <meta property="og:site_name" content="{{ title }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{%- if page.title -%}{{ title }} | {{ page.title }}{%- else -%}{{ title }}{%- endif -%}" />
+    <meta property="og:title" content="{{ title }}" />
     <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}" />
-    <meta property="og:description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
+    <meta property="og:description" content="{{ description }}" />
     {% if page.og_image or site.og_image -%}
     <meta property="og:image" content="{%- if page.og_image -%}{{ page.og_image }}{%- else -%}{{ site.og_image }}{%- endif -%}" />
     {%- endif %}
@@ -67,8 +67,8 @@
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{%- if page.title -%}{{ page.title }}{%- else -%}{{ title }}{%- endif -%}" />
-    <meta name="twitter:description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ description }}" />
     {% if page.og_image or site.og_image -%}
     <meta name="twitter:image" content="{%- if page.og_image -%}{{ page.og_image }}{%- else -%}{{ site.og_image }}{%- endif -%}" />
     {%- endif %}
@@ -200,20 +200,21 @@
     {%- endif -%}
 
     <script type="application/ld+json">
+      {%- capture author -%}{%- if page.author -%}{{ page.author }}{%- else -%}{{ site.author }}{%- endif -%}{%- endcapture -%}
       {
         "author":
         {
           "@type": "Person",
-          "name": "{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}"
+          "name": "{{ author }}"
         },
         "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
         "@type": "WebSite",
-        "description": "{%- if page.description -%}{{ page.description }}{%- else if site.description -%}{{ site.description }}{%- endif -%}",
-        "headline": "{%- if page.title -%}{{ page.title }}{%- else -%}{{ site.title }}{%- endif -%}",
+        "description": "{{ description }}",
+        "headline": "{{ title }}",
         {% if sameaslinks != blank -%}
         "sameAs": {{ sameaslinks }},
         {%- endif %}
-        "name": "{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}",
+        "name": "{{ author }}",
         "@context": "https://schema.org"
       }
     </script>

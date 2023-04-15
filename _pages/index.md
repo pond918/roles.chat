@@ -2,7 +2,6 @@
 layout: index
 title: titles.index
 permalink: /
-subtitle: Chat with AI Roles, they'll get things done!
 
 profile:
   align: right

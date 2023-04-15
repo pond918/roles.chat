@@ -12,7 +12,7 @@ A sample blog page that demonstrates the accessing of github meta data.
 * Propagates the site.github namespace with repository metadata
 * Setting site variables :
   * site.title
-  * site.description
+  * main.description
   * site.url
   * site.baseurl
 * Accessing the metadata - duh.
