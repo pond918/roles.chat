@@ -45,7 +45,8 @@
         {%- capture title -%}{{ title }}{%- endcapture -%}
     {%- endif -%}
     <title>{{ title }}</title>
-    <meta name="author" content="{{ page.author | site.author }}" />
+    {%- capture author -%}{%- if page.author -%}{{ page.author }}{%- else -%}{{ site.author }}{%- endif -%}{%- endcapture -%}
+    <meta name="author" content="{{ author }}" />
     {%- capture description -%}{%- if page.description -%}{{ page.description }}{%- elsif page.url == '/' -%}{% t descriptions.index %}{%- else -%}{% t main.description %}{%- endif -%}{%- endcapture -%}
     <meta name="description" content="{{ description }}" />
 {%- if page.keywords or main.keywords %}
@@ -200,7 +201,6 @@
     {%- endif -%}
 
     <script type="application/ld+json">
-      {%- capture author -%}{%- if page.author -%}{{ page.author }}{%- else -%}{{ site.author }}{%- endif -%}{%- endcapture -%}
       {
         "author":
         {
