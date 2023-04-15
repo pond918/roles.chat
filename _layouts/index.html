@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<!-- about.html -->
+<!-- index.html -->
       <div class="post">
         <header class="post-header">
           <h1 class="post-title">
@@ -18,15 +18,15 @@ layout: default
               {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
 
               {% if page.profile.image_circular %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
+                {%- assign profile_image_class = "img-fluid rounded-circle" -%}
               {% else %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
+                {%- assign profile_image_class = "img-fluid rounded" -%}
               {% endif %}
 
               {% include figure.html
               path=profile_image_path
               class=profile_image_class
-              alt=page.profile.image -%}
+              alt=page.profile.alt -%}
             {% endif -%}
             {%- if page.profile.address %}
             <div class="address">
