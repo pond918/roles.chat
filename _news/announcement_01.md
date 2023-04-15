@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Hooray! the site is ON :sparkles: :smile:
+{% translate_file _news/announcement_01.md %}

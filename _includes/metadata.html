@@ -24,23 +24,32 @@
         {%- capture title -%}{{ site.title }}{%- endcapture -%}
     {%- endif -%}
     {% if page.url == '/' %}
-        {{ page.title }}
+        {% t page.title %}
     {%- elsif page.url == '/blog/index.html' %}
-        {{ site.blog_nav_title }} | {{ title }}
-    {%- elsif page.title != "blank" and page.url != "/" -%}
-        {%- if page.title == nil or page.title == "" -%}
+        {% t titles.blog %} | {{ title }}
+    {% elsif page.url contains '/blog/' %}
+        {%- capture blog_year -%}{{ page.url | slice: 0, 11 }}{%- endcapture -%}
+        {%- if page.url == blog_year -%}
             {{ page.date | date: "%Y" }} | {{ title }}
         {%- else -%}
             {{ page.title }} | {{ title }}
+        {%- endif -%}
+    {%- elsif page.title != "blank" and page.url != "/" -%}
+        {%- if page.title == nil or page.title == "" -%}
+            {{ page.date | date: "%Y" }} | {{ title }}
+        {%- elsif page.title contains 'Announcement' -%}
+            {{ page.title }} | {{ title }}
+        {%- else -%}
+            {% t page.title %} | {{ title }}
         {%- endif -%}
     {%- else -%}
         {{ title }}
     {%- endif -%}
     </title>
     <meta name="author" content="{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}" />
-    <meta name="description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
-{%- if page.keywords or site.keywords %}
-    <meta name="keywords" content="{%- if page.keywords -%}{{ page.keywords }}{%- else -%}{{ site.keywords }}{%- endif -%}" />
+    <meta name="description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{% t main.description %}{%- endif -%}" />
+{%- if page.keywords or main.keywords %}
+    <meta name="keywords" content="{%- if page.keywords -%}{{ page.keywords }}{%- else -%}{% t main.keywords %}{%- endif -%}" />
 {%- endif %}
 
 {%- if site.serve_og_meta %}
