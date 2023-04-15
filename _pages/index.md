@@ -2,6 +2,7 @@
 layout: index
 title: titles.index
 permalink: /
+og_image: /assets/img/chatbot-roles.webp
 
 profile:
   align: right
