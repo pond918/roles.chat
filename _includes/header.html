@@ -102,7 +102,7 @@
           <!-- Toogle language -->
           {%- if site.enable_localization and site.languages.size > 1 -%}
             {%- if site.languages.size == 2 %}
-              <li class="nav-item active">
+              <li class="nav-item">
                 {% if site.lang == site.languages.first %}
                 <a class="nav-link" href="{{site.baseurl_root}}/{{site.languages.last}}{{page.url}}">{% t site.languages.last %}</a>
                 {% elsif site.lang == site.languages.last %}
