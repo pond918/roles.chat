@@ -12,9 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>2022 | roles.chat</title>
     <meta name="author" content="  ">
-    <meta name="description" content="Consider a question to AI model as a task. &gt; For example to ask ChatGPT to install a software. Actually the task involves many ChatRoles to cooperate: &gt; WebSearcher, Downloader, ShellExecutor, ... Each role may open their own chatbox to chat in their small context. &gt; Indeed, to create/maintain/organize all these professional roles to work together, to make your things all DONE, &gt; is what [*Roles.Chat](https://roles.chat) trying to accomplish...!
-">
-    <meta name="keywords" content="LLM, ChatGPT, GPT, prompt, prompt roles, prompt instructions, roles chat, chat roles, chatroles">
+    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.">
 
 
     <!-- Bootstrap & MDB -->
@@ -70,13 +68,10 @@
           
           <!-- Blog -->
           <li class="nav-item active">
-            <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
           </li>
 
           <!-- Other pages -->
-          <li class="nav-item ">
-            <a class="nav-link" href="/publications/">publications</a>
-          </li>
           <li class="nav-item ">
             <a class="nav-link" href="/projects/">projects</a>
           </li>
@@ -84,22 +79,28 @@
             <a class="nav-link" href="/repositories/">repositories</a>
           </li>
           <li class="nav-item dropdown ">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">submenus</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">more</a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="/publications/">publications</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/projects/">projects</a>
             </div>
           </li>
+            <!-- Toogle theme mode -->
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+              </button>
+            </li>
 
-          <!-- Toogle theme mode -->
-          <li class="toggle-container">
-            <button id="light-toggle" title="Change theme">
-              <i class="fas fa-moon"></i>
-              <i class="fas fa-sun"></i>
-            </button>
-          </li>
-        </ul>
+          <!-- Toogle language -->
+              <li class="nav-item active">
+                
+                <a class="nav-link" href="/zh-cn/blog/2022/">中文</a>
+                
+              </li>
+</ul>
       </div>
     </div>
   </nav>
@@ -151,8 +152,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2023   . Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
-Last updated: April 15, 2023.
+        © Copyright 2023   . 
       </div>
     </footer>
 
@@ -179,8 +179,8 @@ Last updated: April 15, 2023.
   <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
   <script async src="https://badge.dimensions.ai/badge.js"></script>
 
-    
-
+    <!-- 
+ -->
     
     
 

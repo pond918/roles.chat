@@ -9,11 +9,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Blog - page 3 | roles.chat</title>
+    <title>titles.blog - page 3 | roles.chat</title>
     <meta name="author" content="  " />
-    <meta name="description" content="Consider a question to AI model as a task. > For example to ask ChatGPT to install a software. Actually the task involves many ChatRoles to cooperate: > WebSearcher, Downloader, ShellExecutor, ... Each role may open their own chatbox to chat in their small context. > Indeed, to create/maintain/organize all these professional roles to work together, to make your things all DONE, > is what [*Roles.Chat](https://roles.chat) trying to accomplish...!
-" />
-    <meta name="keywords" content="LLM, ChatGPT, GPT, prompt, prompt roles, prompt instructions, roles chat, chat roles, chatroles" />
+    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design." />
 
 
     <!-- Bootstrap & MDB -->
@@ -69,13 +67,10 @@
           
           <!-- Blog -->
           <li class="nav-item active">
-            <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
           </li>
 
           <!-- Other pages -->
-          <li class="nav-item ">
-            <a class="nav-link" href="/publications/">publications</a>
-          </li>
           <li class="nav-item ">
             <a class="nav-link" href="/projects/">projects</a>
           </li>
@@ -83,22 +78,27 @@
             <a class="nav-link" href="/repositories/">repositories</a>
           </li>
           <li class="nav-item dropdown ">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">submenus</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">more</a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="/publications/">publications</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/projects/">projects</a>
             </div>
           </li>
+            <!-- Toogle theme mode -->
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+              </button>
+            </li>
 
-          <!-- Toogle theme mode -->
-          <li class="toggle-container">
-            <button id="light-toggle" title="Change theme">
-              <i class="fas fa-moon"></i>
-              <i class="fas fa-sun"></i>
-            </button>
-          </li>
-        </ul>
+          <!-- Toogle language -->
+              <li class="nav-item active">
+                
+                <a class="nav-link" href="/zh-cn/blog/page/3/index.html">中文</a>
+                
+              </li></ul>
       </div>
     </div>
   </nav>
@@ -126,35 +126,35 @@
     <ul class="p-0 m-0">
       
         <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/formatting">formatting</a>
+          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/tags-formatting">formatting</a>
         </li>
         
           <p>&bull;</p>
         
       
         <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/images">images</a>
+          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/tags-images">images</a>
         </li>
         
           <p>&bull;</p>
         
       
         <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/links">links</a>
+          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/tags-links">links</a>
         </li>
         
           <p>&bull;</p>
         
       
         <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/math">math</a>
+          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/tags-math">math</a>
         </li>
         
           <p>&bull;</p>
         
       
         <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/code">code</a>
+          <i class="fas fa-hashtag fa-sm"></i> <a href="/blog/tag/tags-code">code</a>
         </li>
         
       
@@ -213,9 +213,9 @@
   <ul class="pagination pagination-lg justify-content-center">
     <li class="page-item ">
       <a class="page-link" href="/blog/page/2/" tabindex="-1" aria-disabled="2">Newer</a>
-    </li><li class="page-item "><a class="page-link" href="/blog/index.html" title="Blog">1</a></li>
-      <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="Blog - page 2">2</a></li>
-      <li class="page-item active"><a class="page-link" href="/blog/page/3/index.html" title="Blog - page 3">3</a></li>
+    </li><li class="page-item "><a class="page-link" href="/blog/index.html" title="titles.blog">1</a></li>
+      <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="titles.blog - page 2">2</a></li>
+      <li class="page-item active"><a class="page-link" href="/blog/page/3/index.html" title="titles.blog - page 3">3</a></li>
       <li class="page-item disabled">
       <a class="page-link" href="">Older</a>
     </li>
@@ -229,8 +229,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        &copy; Copyright 2023   . Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-Last updated: April 15, 2023.
+        &copy; Copyright 2023   . 
       </div>
     </footer>
 
@@ -257,8 +256,8 @@ Last updated: April 15, 2023.
   <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
   <script async src="https://badge.dimensions.ai/badge.js"></script>
 
-    
-
+    <!-- 
+ -->
     
     
 
