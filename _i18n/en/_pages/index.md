@@ -3,7 +3,7 @@
 
 What if several different roles chat together to do your job...
 
-For example, when you require to install a software, there may be 3 AI `chatRoles` involved:
+For example, when you require to install a software, there may be 3 AI `ChatRoles` involved:
 
 - WebSearcher: be good at choosing search keywords and picking proper webpage results
 - Downloader: knows how to download files
@@ -11,7 +11,7 @@ For example, when you require to install a software, there may be 3 AI `chatRole
 
 Note that, there may be several sub-conversations between these roles. For example, download url may be broken, shell execution may encounter exceptions. In these situations, roles may require more web searches to get it right.
 
-This is what we want to achieve: to build a huge specialized AI `chatRoles` `repo`:
+This is what we want to achieve: to build a huge specialized AI `ChatRoles` `repo`:
 
 - `prompt`s based roles
 - `fine-tuned` specilized model roles
@@ -20,12 +20,12 @@ This is what we want to achieve: to build a huge specialized AI `chatRoles` `rep
 - big roles: several roles bounded together based on routines
 - ...
 
-You may create/verify/refine/report, (and most important)chat with each one of the `chatRoles` in the repo **on the fly**, right beside your `chatbox`!
+You may create/verify/refine/report, (and most important)chat with each one of the `ChatRoles` in the repo **on the fly**, right beside your `chatbox`!
 
-Behind all these scenarios, we utilize the `vectorStore`/`LLM`s, to match the exact `chatRoles` to your conversation.
+Behind all these scenarios, we utilize the `vectorStore`/`LLM`s, to match the exact `ChatRoles` to your conversation.
 
-More over, letting `chatRoles` to have sub-conversations, has the advantage to control the context length, as the big boss, you needn't know about each details, and things are settled!
+More over, letting `ChatRoles` to have sub-conversations, has the advantage to control the context length, as the big boss, you needn't know about each details, and things are settled!
 
-First things first, we are defining the specifications for `chatRoles` and `coordination`s!
+First things first, we are defining the specifications for `ChatRoles` and `coordination`s!
 
 So, stay tuned.

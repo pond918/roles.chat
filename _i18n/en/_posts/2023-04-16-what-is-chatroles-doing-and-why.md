@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What is Chatroles doing? Why do I need it?
+title: What is ChatRoles doing? Why do I need it?
 date: 2023-04-16 08:35:00+0800
 description: A brief introduction on how ChatRoles works, why do we need it, and how to use it.
 tags: tag-quick-start
