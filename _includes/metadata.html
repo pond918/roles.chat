@@ -56,7 +56,7 @@
 {%- if site.serve_og_meta %}
 
     {%- capture og_image -%}{%- if page.og_image -%}{{ page.og_image }}{%- else -%}{{ site.og_image }}{%- endif -%}{%- endcapture -%}
-    {%- capture og_image -%}{{ og_image | prepend: site.baseurl | prepend: site.url }}{%- endcapture -%}
+    {%- capture og_image_url -%}{{ site.url }}{{ site.baseurl }}{{ og_image }}{%- endcapture -%}
     <!-- OpenGraph -->
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:type" content="website" />
@@ -64,7 +64,7 @@
     <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}" />
     <meta property="og:description" content="{{ description }}" />
     {% if og_image -%}
-    <meta property="og:image" content="{{ og_image }}" />
+    <meta property="og:image" content="{{ og_image_url }}" />
     {%- endif %}
     <meta property="og:locale" content="{{ site.lang }}" />
 
@@ -73,7 +73,7 @@
     <meta name="twitter:title" content="{{ title }}" />
     <meta name="twitter:description" content="{{ description }}" />
     {% if og_image -%}
-    <meta name="twitter:image" content="{{ og_image }}" />
+    <meta name="twitter:image" content="{{ og_image_url }}" />
     {%- endif %}
     {% if site.twitter_username -%}
     <meta name="twitter:site" content="@{{ site.twitter_username }}" />
