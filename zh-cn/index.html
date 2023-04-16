@@ -202,7 +202,7 @@
   <li>ShellExecutor: writes/executes shell commands, to make it works</li>
 </ul>
 
-<p>Note that, there may be several small conversations between these roles. For example, download url may be broken, shell execution may encounter exceptions. In these situations, roles may require more web searches to get it right.</p>
+<p>Note that, there may be several sub-conversations between these roles. For example, download url may be broken, shell execution may encounter exceptions. In these situations, roles may require more web searches to get it right.</p>
 
 <p>This is what we want to achieve: to build a huge specialized AI <code class="language-plaintext highlighter-rouge">chatRoles</code> <code class="language-plaintext highlighter-rouge">repo</code>:</p>
 
@@ -221,7 +221,7 @@
 
 <p>Behind all these scenarios, we utilize the <code class="language-plaintext highlighter-rouge">vectorStore</code>/<code class="language-plaintext highlighter-rouge">LLM</code>s, to match the exact <code class="language-plaintext highlighter-rouge">chatRoles</code> to your conversation.</p>
 
-<p>More over, letting <code class="language-plaintext highlighter-rouge">chatRoles</code> to have small conversations, has the advantage to control the context length, as the big boss, you needn’t know about each details, and things are settled!</p>
+<p>More over, letting <code class="language-plaintext highlighter-rouge">chatRoles</code> to have sub-conversations, has the advantage to control the context length, as the big boss, you needn’t know about each details, and things are settled!</p>
 
 <p>First things first, we are defining the specifications for <code class="language-plaintext highlighter-rouge">chatRoles</code> and <code class="language-plaintext highlighter-rouge">coordination</code>s!</p>
 
