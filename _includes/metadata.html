@@ -56,7 +56,7 @@
 {%- if site.serve_og_meta %}
 
     {%- capture og_image -%}{%- if page.og_image -%}{{ page.og_image }}{%- else -%}{{ site.og_image }}{%- endif -%}{%- endcapture -%}
-    {%- capture og_image_url -%}{{ site.url }}{{ site.baseurl }}{{ og_image }}{%- endcapture -%}
+    {%- capture og_image_url -%}{{ og_image | absolute_url }}{%- endcapture -%}
     <!-- OpenGraph -->
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:type" content="website" />
