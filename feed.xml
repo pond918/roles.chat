@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-16T02:56:52+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">What is Chatroles doing? Why do I need it?</title><link href="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/" rel="alternate" type="text/html" title="What is Chatroles doing? Why do I need it?" /><published>2023-04-16T00:35:00+00:00</published><updated>2023-04-16T00:35:00+00:00</updated><id>https://roles.chat/blog/2023/what-is-chatroles-doing-and-why</id><content type="html" xml:base="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/"><![CDATA[<h2 id="what-is-chatroles">What is ChatRoles?</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-16T03:14:30+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">What is Chatroles doing? Why do I need it?</title><link href="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/" rel="alternate" type="text/html" title="What is Chatroles doing? Why do I need it?" /><published>2023-04-16T00:35:00+00:00</published><updated>2023-04-16T00:35:00+00:00</updated><id>https://roles.chat/blog/2023/what-is-chatroles-doing-and-why</id><content type="html" xml:base="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/"><![CDATA[<h2 id="what-is-chatroles">What is ChatRoles?</h2>
 
 <p>Since the launch of <code class="language-plaintext highlighter-rouge">ChatGPT</code>s, we have all felt its power - just ask it a question directly, even more convenient than Google.</p>
 
 <p><code class="language-plaintext highlighter-rouge">ChatRoles</code> is a task processing service built on the basis of <code class="language-plaintext highlighter-rouge">ChatGPT</code>s. So why do we need <code class="language-plaintext highlighter-rouge">ChatRoles</code> instead of directly asking <code class="language-plaintext highlighter-rouge">ChatGPT</code>s?</p>
 
-<p>In one word, when a problem/task is too complex and requires thousands of Q&amp;As to clarify, we need a method to break down the task and assign it to multiple roles for execution.</p>
+<p>In one word, when a problem/task is too complex and requires <strong>over thousands</strong> of Q&amp;As to clarify, we need a method to break down the task and assign it to multiple roles for execution.</p>
 
 <p>This can include tasks such as market research, writing a novel, developing a game, or even mundane tasks like installing software.</p>
 
@@ -18,7 +18,7 @@
 
 <h5 id="contextual-constraints">Contextual constraints</h5>
 
-<p>First, <code class="language-plaintext highlighter-rouge">ChatGPT</code> has a ~4k~30k tokens limitation. This means that if you chat with it too much, it will <strong>forget</strong> the previous conversation and won’t be able to handle too complex problems.</p>
+<p>First, <code class="language-plaintext highlighter-rouge">ChatGPT</code>s has a ~4k~30k tokens limitation. This means that if you chat with it too much, it will <strong>forget</strong> the previous conversation and won’t be able to handle too complex problems.</p>
 
 <p>Therefore, using the context structure of <code class="language-plaintext highlighter-rouge">ChatTree</code>, subtasks can be split into sub-conversations, which won’t enlarge the main context length. <code class="language-plaintext highlighter-rouge">ChatRoles</code> works like team members who cooperate and communicate privately. As the big boss, you don’t need to grasp each details.</p>
 
