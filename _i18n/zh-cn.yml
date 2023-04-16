@@ -45,9 +45,9 @@ repositories:
   users: GitHub 用户
   repos: GitHub 仓库
 
-tags:
-  formatting: 格式化
-  images: 图片
-  links: 链接
-  math: 数学
-  code: 代码
+# tags:
+tag-quick-start: 快速上手
+tag-images: 图片
+tag-links: 链接
+tag-math: 数学
+tag-code: 代码

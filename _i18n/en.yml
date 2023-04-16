@@ -1,6 +1,5 @@
 en: English
 zh-cn: 中 文
-jp: jp
 
 titles:
   home: home
@@ -75,9 +74,10 @@ repositories:
   users: GitHub Users
   repos: GitHub Repositories
 
-tags:
-  formatting: formatting
-  images: images
-  links: links
-  math: math
-  code: code
+# tags:
+tag-quick-start: quick start
+tag-formatting: formatting
+tag-images: images
+tag-links: links
+tag-math: math
+tag-code: code

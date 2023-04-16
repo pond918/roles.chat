@@ -8,7 +8,7 @@ first_name:
 middle_name:
 last_name:
 email: support@roles.chat
-keywords: LLM, ChatGPT, GPT, prompt, prompt roles, prompt instructions, roles chat, chat roles, chatroles # add your own keywords or leave empty
+keywords: LLM, ChatGPT, GPT, prompt, prompt roles, prompt instructions, roles chat, chat roles, ChatRoles, ChatTree # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -263,7 +263,7 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
-display_tags: ['tags.formatting', 'tags.images', 'tags.links', 'tags.math', 'tags.code'] # this tags will be dispalyed on the front page of your blog
+display_tags: ['tag-quick-start', 'tag-images', 'tag-links', 'tag-math', 'tag-code'] # this tags will be dispalyed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
