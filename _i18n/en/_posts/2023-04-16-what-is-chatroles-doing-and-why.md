@@ -15,7 +15,7 @@ Since the launch of `ChatGPT`s, we have all felt its power - just ask it a quest
 
 `ChatRoles` is a task processing service built on the basis of `ChatGPT`s. So why do we need `ChatRoles` instead of directly asking `ChatGPT`s?
 
-In one word, when a problem/task is too complex and requires thousands of Q&As to clarify, we need a method to break down the task and assign it to multiple roles for execution.
+In one word, when a problem/task is too complex and requires **over thousands** of Q&As to clarify, we need a method to break down the task and assign it to multiple roles for execution.
 
 This can include tasks such as market research, writing a novel, developing a game, or even mundane tasks like installing software.
 
@@ -29,7 +29,7 @@ This involves several technical issues.
 
 ##### Contextual constraints
 
-First, `ChatGPT` has a ~4k~30k tokens limitation. This means that if you chat with it too much, it will **forget** the previous conversation and won't be able to handle too complex problems.
+First, `ChatGPT`s has a ~4k~30k tokens limitation. This means that if you chat with it too much, it will **forget** the previous conversation and won't be able to handle too complex problems.
 
 Therefore, using the context structure of `ChatTree`, subtasks can be split into sub-conversations, which won't enlarge the main context length. `ChatRoles` works like team members who cooperate and communicate privately. As the big boss, you don't need to grasp each details.
 
