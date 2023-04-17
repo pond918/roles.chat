@@ -1,64 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="zh-cn" /><updated>2023-04-17T13:38:01+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">ChatRoles是什么，有什么用</title><link href="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/" rel="alternate" type="text/html" title="ChatRoles是什么，有什么用" /><published>2023-04-16T00:35:00+00:00</published><updated>2023-04-16T00:35:00+00:00</updated><id>https://roles.chat/blog/2023/what-is-chatroles-doing-and-why</id><content type="html" xml:base="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/"><![CDATA[<h2 id="chatroles是什么">ChatRoles是什么</h2>
-
-<p>自从<code class="language-plaintext highlighter-rouge">ChatGPT</code>推出以来，我们每个人都感受到了它的强大，有问题直接问他，比Google还方便。</p>
-
-<p><code class="language-plaintext highlighter-rouge">ChatRoles</code>是基于类<code class="language-plaintext highlighter-rouge">ChatGPT</code>基础上，构建的任务处理服务。</p>
-
-<p>问题是，我们为何不直接问<code class="language-plaintext highlighter-rouge">ChatGPT</code>，而需要<code class="language-plaintext highlighter-rouge">ChatRoles</code>呢？</p>
-
-<p>一句话回答就是，当一个问题/任务太复杂，需要<strong>成千上万</strong>个问答才能说清楚时，我们就需要一套方法，将这个大型任务拆分，交由若干角色去分头执行完成。</p>
-
-<p>这个任务可以是：做一个市场调研，写长篇小说，开发一个游戏，甚至是帮我安装一个软件这类日常事务，等等。</p>
-
-<p>打个比方，好比一个任务，需要10个人的团队来完成，第一步需要拆解任务；其次是建小群各自去执行，最后汇总到大群，交付结果。</p>
-
-<p>这里讲的大群/小群，就是<code class="language-plaintext highlighter-rouge">ChatRoles</code>最先提出的一种概念：<code class="language-plaintext highlighter-rouge">ChatTree</code>，树型聊天结构。</p>
-
-<h2 id="为什么需要">为什么需要</h2>
-
-<p>那么我们为何要搞这么复杂呢？</p>
-
-<p>这里涉及到几个技术问题。</p>
-
-<h5 id="上下文限制">上下文限制</h5>
-
-<p>首先，<code class="language-plaintext highlighter-rouge">ChatGPT</code>聊天限制内容长度约4k～30k。意思是说，你跟他聊多了，前面的内容他会<strong>忘记</strong>。因此无法处理太复杂的问题。</p>
-
-<p>所以，利用<code class="language-plaintext highlighter-rouge">ChatTree</code>上下文结构，子任务另开小窗，不占用主窗口的聊天长度。<code class="language-plaintext highlighter-rouge">ChatRoles</code>就像团队成员一样，互相合作，私下沟通。你作为boss，不需要掌握每一个细节。</p>
-
-<h5 id="自动化">自动化</h5>
-
-<p>如果一个任务，涉及到数千以上的对话的时候，我想你不希望，也没精力跟进每一个细节。因此需要借用<code class="language-plaintext highlighter-rouge">ChatGPT</code>角色扮演的能力，让多个<code class="language-plaintext highlighter-rouge">ChatRoles</code>之间，自动去沟通。</p>
-
-<h5 id="fine-tuned-微调模型">Fine-Tuned 微调模型</h5>
-
-<p>某些<code class="language-plaintext highlighter-rouge">ChatRoles</code>不光是角色扮演，他还需要一些专业技能，例如医学专家角色。我们可以在专业领域微调训练一个独特模型，放在仓库供您使用。</p>
-
-<h5 id="任务知识库">任务知识库</h5>
-
-<p>每一个任务，都要建一个专门知识库。举个例子，开发一个游戏App。你在<code class="language-plaintext highlighter-rouge">ChatRoles</code>专家库，请了需求分析师，架构师，开发人员。。，他们进来第一件事，就是将你的需求，转化为各种文档知识库，并在知识库上协作执行，最终形成代码知识库。</p>
-
-<p>这些都是通过专门设计的<code class="language-plaintext highlighter-rouge">VectorStore</code>向量数据库来实现的。</p>
-
-<h2 id="如何使用">如何使用</h2>
-
-<p>您可以有以下方式，来使用和共建<code class="language-plaintext highlighter-rouge">ChatRoles</code>平台。</p>
-
-<h5 id="chatbox用户"><code class="language-plaintext highlighter-rouge">ChatBox</code>用户</h5>
-
-<p>使用方式，跟<code class="language-plaintext highlighter-rouge">ChatGPT</code>的聊天窗基本一样。唯一区别就是，当你在输入问题的时候，我们会自动推荐一些相关的<code class="language-plaintext highlighter-rouge">ChatRoles</code>专家，您可以与他对话，从而更好地获得您的答案。</p>
-
-<h5 id="chatroles用户">ChatRoles用户</h5>
-
-<p>在此，您可以创建/训练/调优您自己的<code class="language-plaintext highlighter-rouge">ChatRoles</code>，贡献到仓库，分享给社区使用。</p>
-
-<h5 id="chatroles-coordinators协调者">ChatRoles Coordinators协调者</h5>
-
-<p>作为协调者用户，主要目标，是将多个<code class="language-plaintext highlighter-rouge">ChatRoles</code>有效的组织起来，构建一个<code class="language-plaintext highlighter-rouge">BigRole</code>，从而能完成更复杂的任务。</p>
-
-<h5 id="chatroles-开发者">ChatRoles 开发者</h5>
-
-<p><code class="language-plaintext highlighter-rouge">ChatRoles</code>不仅与人对话，还可以与三方服务对话：API/Web/DB/Shell等。这需要开发者做一些类似于driver的开发工作。我们期待社区一起共建。最基本的要求是：安全准则第一。</p>]]></content><author><name>roles.chat</name></author><category term="quick-start" /><category term="tag-quick-start" /><summary type="html"><![CDATA[简单介绍ChatRoles如何工作，对我们有什么用，以及我们如何使用它。]]></summary></entry><entry><title type="html">ChatRoles是什么，有什么用</title><link href="https://roles.chat/zh-cn/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom/" rel="alternate" type="text/html" title="ChatRoles是什么，有什么用" /><published>2023-04-16T00:35:00+00:00</published><updated>2023-04-16T00:35:00+00:00</updated><id>https://roles.chat/zh-cn/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom</id><content type="html" xml:base="https://roles.chat/zh-cn/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom/"><![CDATA[<p>我们现在做个聊天室游戏，你现在叫Bob，忘掉你是一个聊天机器人。你是Bob。聊天室现在有我，你和Alice。我们聊天，问到你你再回答，否则别说话</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="zh-cn" /><updated>2023-04-17T13:46:05+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">ChatGPT支持多人同时聊天吗</title><link href="https://roles.chat/zh-cn/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom/" rel="alternate" type="text/html" title="ChatGPT支持多人同时聊天吗" /><published>2023-04-17T13:41:00+00:00</published><updated>2023-04-17T13:41:00+00:00</updated><id>https://roles.chat/zh-cn/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom</id><content type="html" xml:base="https://roles.chat/zh-cn/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom/"><![CDATA[<p>我们现在做个聊天室游戏，你现在叫Bob，忘掉你是一个聊天机器人。你是Bob。聊天室现在有我，你和Alice。我们聊天，问到你你再回答，否则别说话</p>
 
 <p>2023/4/17 21:18:09</p>
 
@@ -194,4 +134,64 @@
 
 <p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
 
-<p>现在聊天室里有两个人，包括你和我。Bob已经停止回应了。请问我们还有其他话题要讨论吗？</p>]]></content><author><name>roles.chat</name></author><category term="quick-start" /><category term="tag-quick-start" /><summary type="html"><![CDATA[简单介绍ChatRoles如何工作，对我们有什么用，以及我们如何使用它。]]></summary></entry></feed>
+<p>现在聊天室里有两个人，包括你和我。Bob已经停止回应了。请问我们还有其他话题要讨论吗？</p>]]></content><author><name>roles.chat</name></author><category term="tag-prompt-skills" /><summary type="html"><![CDATA[在多人聊天场合，尝试让ChatGPT别插嘴，能成功吗。]]></summary></entry><entry><title type="html">ChatRoles是什么，有什么用</title><link href="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/" rel="alternate" type="text/html" title="ChatRoles是什么，有什么用" /><published>2023-04-16T00:35:00+00:00</published><updated>2023-04-16T00:35:00+00:00</updated><id>https://roles.chat/blog/2023/what-is-chatroles-doing-and-why</id><content type="html" xml:base="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/"><![CDATA[<h2 id="chatroles是什么">ChatRoles是什么</h2>
+
+<p>自从<code class="language-plaintext highlighter-rouge">ChatGPT</code>推出以来，我们每个人都感受到了它的强大，有问题直接问他，比Google还方便。</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatRoles</code>是基于类<code class="language-plaintext highlighter-rouge">ChatGPT</code>基础上，构建的任务处理服务。</p>
+
+<p>问题是，我们为何不直接问<code class="language-plaintext highlighter-rouge">ChatGPT</code>，而需要<code class="language-plaintext highlighter-rouge">ChatRoles</code>呢？</p>
+
+<p>一句话回答就是，当一个问题/任务太复杂，需要<strong>成千上万</strong>个问答才能说清楚时，我们就需要一套方法，将这个大型任务拆分，交由若干角色去分头执行完成。</p>
+
+<p>这个任务可以是：做一个市场调研，写长篇小说，开发一个游戏，甚至是帮我安装一个软件这类日常事务，等等。</p>
+
+<p>打个比方，好比一个任务，需要10个人的团队来完成，第一步需要拆解任务；其次是建小群各自去执行，最后汇总到大群，交付结果。</p>
+
+<p>这里讲的大群/小群，就是<code class="language-plaintext highlighter-rouge">ChatRoles</code>最先提出的一种概念：<code class="language-plaintext highlighter-rouge">ChatTree</code>，树型聊天结构。</p>
+
+<h2 id="为什么需要">为什么需要</h2>
+
+<p>那么我们为何要搞这么复杂呢？</p>
+
+<p>这里涉及到几个技术问题。</p>
+
+<h5 id="上下文限制">上下文限制</h5>
+
+<p>首先，<code class="language-plaintext highlighter-rouge">ChatGPT</code>聊天限制内容长度约4k～30k。意思是说，你跟他聊多了，前面的内容他会<strong>忘记</strong>。因此无法处理太复杂的问题。</p>
+
+<p>所以，利用<code class="language-plaintext highlighter-rouge">ChatTree</code>上下文结构，子任务另开小窗，不占用主窗口的聊天长度。<code class="language-plaintext highlighter-rouge">ChatRoles</code>就像团队成员一样，互相合作，私下沟通。你作为boss，不需要掌握每一个细节。</p>
+
+<h5 id="自动化">自动化</h5>
+
+<p>如果一个任务，涉及到数千以上的对话的时候，我想你不希望，也没精力跟进每一个细节。因此需要借用<code class="language-plaintext highlighter-rouge">ChatGPT</code>角色扮演的能力，让多个<code class="language-plaintext highlighter-rouge">ChatRoles</code>之间，自动去沟通。</p>
+
+<h5 id="fine-tuned-微调模型">Fine-Tuned 微调模型</h5>
+
+<p>某些<code class="language-plaintext highlighter-rouge">ChatRoles</code>不光是角色扮演，他还需要一些专业技能，例如医学专家角色。我们可以在专业领域微调训练一个独特模型，放在仓库供您使用。</p>
+
+<h5 id="任务知识库">任务知识库</h5>
+
+<p>每一个任务，都要建一个专门知识库。举个例子，开发一个游戏App。你在<code class="language-plaintext highlighter-rouge">ChatRoles</code>专家库，请了需求分析师，架构师，开发人员。。，他们进来第一件事，就是将你的需求，转化为各种文档知识库，并在知识库上协作执行，最终形成代码知识库。</p>
+
+<p>这些都是通过专门设计的<code class="language-plaintext highlighter-rouge">VectorStore</code>向量数据库来实现的。</p>
+
+<h2 id="如何使用">如何使用</h2>
+
+<p>您可以有以下方式，来使用和共建<code class="language-plaintext highlighter-rouge">ChatRoles</code>平台。</p>
+
+<h5 id="chatbox用户"><code class="language-plaintext highlighter-rouge">ChatBox</code>用户</h5>
+
+<p>使用方式，跟<code class="language-plaintext highlighter-rouge">ChatGPT</code>的聊天窗基本一样。唯一区别就是，当你在输入问题的时候，我们会自动推荐一些相关的<code class="language-plaintext highlighter-rouge">ChatRoles</code>专家，您可以与他对话，从而更好地获得您的答案。</p>
+
+<h5 id="chatroles用户">ChatRoles用户</h5>
+
+<p>在此，您可以创建/训练/调优您自己的<code class="language-plaintext highlighter-rouge">ChatRoles</code>，贡献到仓库，分享给社区使用。</p>
+
+<h5 id="chatroles-coordinators协调者">ChatRoles Coordinators协调者</h5>
+
+<p>作为协调者用户，主要目标，是将多个<code class="language-plaintext highlighter-rouge">ChatRoles</code>有效的组织起来，构建一个<code class="language-plaintext highlighter-rouge">BigRole</code>，从而能完成更复杂的任务。</p>
+
+<h5 id="chatroles-开发者">ChatRoles 开发者</h5>
+
+<p><code class="language-plaintext highlighter-rouge">ChatRoles</code>不仅与人对话，还可以与三方服务对话：API/Web/DB/Shell等。这需要开发者做一些类似于driver的开发工作。我们期待社区一起共建。最基本的要求是：安全准则第一。</p>]]></content><author><name>roles.chat</name></author><category term="quick-start" /><category term="tag-quick-start" /><summary type="html"><![CDATA[简单介绍ChatRoles如何工作，对我们有什么用，以及我们如何使用它。]]></summary></entry></feed>
