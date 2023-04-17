@@ -13,6 +13,7 @@ titles:
   teaching: teaching
   submenus: more
   unk: page not found
+  related_posts: Enjoy Reading This Article?
 
 descriptions:
   index: >
@@ -30,6 +31,7 @@ descriptions:
   repositories: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
   teaching: Materials for courses you taught. Replace this text with your description.
   unk: Looks like there has been a mistake. Nothing exists here.
+  related_posts: Here are some more articles you might like to read next
 
 not_found:
   message: You will be redirected to the main page within 3 seconds. If not redirected, please go back to the

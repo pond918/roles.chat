@@ -10,6 +10,7 @@ titles:
   publications: 发表
   submenus: 更多
   unk: 页面不存在
+  related_posts: 意犹未尽？
 
 descriptions:
   index: >
@@ -24,6 +25,7 @@ descriptions:
   repositories: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
   teaching: Materials for courses you taught. Replace this text with your description.
   unk: 看起来不太对劲，这里一片荒芜...
+  related_posts : 这些文章您可能也有兴趣
 
 not_found:
   message: 您将在3秒钟内被重定向到主页面。如果没有重定向，请返回
