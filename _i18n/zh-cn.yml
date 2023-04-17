@@ -37,6 +37,8 @@ main:
     更进一步，我们将这些 `ChatRoles` 角色组织起来，构建一种叫做`ChatTree`的树型小窗聊天结构，
     使一个需要上万个问答的大型任务，能够轻松完成。
   subtitle: 告诉 AI Roles, 他们会搞定一切.
+  keywords: LLM, 大语言模型, ChatGPT, GPT, prompts, 提示语, prompt roles, prompt instructions, 提示语指令, roles chat, 角色会话, chat roles, ChatRoles, ChatTree, 会话树, fine-tune, 微调 # add your own keywords or leave empty
+
 
 blog:
   description: 告诉 AI Roles, 他们会搞定一切!

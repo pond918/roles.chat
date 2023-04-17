@@ -8,7 +8,6 @@ first_name:
 middle_name:
 last_name:
 email: support@roles.chat
-keywords: LLM, ChatGPT, GPT, prompt, prompt roles, prompt instructions, roles chat, chat roles, ChatRoles, ChatTree # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)

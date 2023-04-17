@@ -46,6 +46,8 @@ main:
     More over, `ChatRoles` can be organized to have a tree-like chat records structure called `ChatTree`,
     as a solution to your huge question/task involving over tens of thousands of Q&As.
   subtitle: Chat with AI Roles, they'll get things done.
+  keywords: LLM, ChatGPT, GPT, prompt, prompt roles, prompt instructions, roles chat, chat roles, ChatRoles, ChatTree, fine-tune # add your own keywords or leave empty
+
 
 blog:
   description: Chat with AI Roles, they'll get it done!

@@ -49,9 +49,7 @@
     <meta name="author" content="{{ author }}" />
     {%- capture description -%}{%- if page.description -%}{{ page.description }}{%- elsif page.url == '/' -%}{% t descriptions.index %}{%- else -%}{% t main.description %}{%- endif -%}{%- endcapture -%}
     <meta name="description" content="{{ description }}" />
-{%- if page.keywords or main.keywords %}
     <meta name="keywords" content="{%- if page.keywords -%}{{ page.keywords }}{%- else -%}{% t main.keywords %}{%- endif -%}" />
-{%- endif %}
 
 {%- if site.serve_og_meta %}
 
