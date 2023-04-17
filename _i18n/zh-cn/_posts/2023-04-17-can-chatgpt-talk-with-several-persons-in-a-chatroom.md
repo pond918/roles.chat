@@ -1,10 +1,9 @@
 ---
 layout: post
-title: ChatRoles是什么，有什么用
-date: 2023-04-16 08:35:00+0800
-description: 简单介绍ChatRoles如何工作，对我们有什么用，以及我们如何使用它。
-tags: tag-quick-start
-categories: quick-start
+title: ChatGPT支持多人同时聊天吗
+date: 2023-04-17 21:41:00+0800
+description: 在多人聊天场合，尝试让ChatGPT别插嘴，能成功吗。
+tags: tag-prompt-skills
 giscus_comments: true
 related_posts: true
 ---
