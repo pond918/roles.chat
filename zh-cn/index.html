@@ -191,42 +191,38 @@
 
           <div class="clearfix">
             
-<p><code class="language-plaintext highlighter-rouge">LLM</code>s like <code class="language-plaintext highlighter-rouge">ChatGPT</code>s are powerful. They leverage <code class="language-plaintext highlighter-rouge">prompt</code> instructions to act as a specific role to respond you.</p>
+<p>告诉 AI Roles, 他们会搞定一切！</p>
 
-<p>What if several different roles chat together to do your job…</p>
+<p>今年以来，LLMs（智能语言大模型）比如ChatGPT等的威力炸翻全场。当您向它们发出提示性指令后，它们会化身各个领域的专家，回应您的提问，解决您的问题。</p>
 
-<p>For example, when you require to install a software, there may be 3 AI <code class="language-plaintext highlighter-rouge">ChatRoles</code> involved:</p>
+<p>如果有多个不同领域的专家一起配合，帮您解决问题呢？</p>
 
-<ul>
-  <li>WebSearcher: be good at choosing search keywords and picking proper webpage results</li>
-  <li>Downloader: knows how to download files</li>
-  <li>ShellExecutor: writes/executes shell commands, to make it works</li>
-</ul>
+<p>例如，当您需要安装软件时，程序将为您自动匹配3个AI ChatRoles专家：</p>
 
-<p>Note that, there may be several sub-conversations between these roles. For example, download url may be broken, shell execution may encounter exceptions. In these situations, roles may require more web searches to get it right.</p>
+<p>WebSearcher：擅长选择合适的搜索关键词和正确的网页结果
+Downloader：知悉如何下载文件
+ShellExecutor：编写/执行脚本命令，使其正常工作</p>
 
-<p>This is what we want to achieve: to build a huge specialized AI <code class="language-plaintext highlighter-rouge">ChatRoles</code> <code class="language-plaintext highlighter-rouge">repo</code>:</p>
+<p>值得注意的是，这些专家之间可能会同时展开几个小窗对话：例如，下载的网址被损坏，脚本执行时遇到错误，等等。遇到这种情况，ChatRoles专家将会进行更多的网络搜索，以找到正确的合适的答案。</p>
 
-<ul>
-  <li>
-<code class="language-plaintext highlighter-rouge">prompt</code>s based roles</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">fine-tuned</code> specilized model roles</li>
-  <li>task <code class="language-plaintext highlighter-rouge">coordinator</code> roles</li>
-  <li>action roles, like web surfer, API invoker, shell executor, etc. (with security concerns).</li>
-  <li>big roles: several roles bounded together based on routines</li>
-  <li>…</li>
-</ul>
+<p>我们想要实现的就是：建立一个高度专业化的AI ChatRoles专家库：</p>
 
-<p>You may create/verify/refine/report, (and most important)chat with each one of the <code class="language-plaintext highlighter-rouge">ChatRoles</code> in the repo <strong>on the fly</strong>, right beside your <code class="language-plaintext highlighter-rouge">chatbox</code>!</p>
+<p>基于提示语的专家角色
+模型微调（fine-tuned）的专家角色
+任务协调的专家角色
+执行外部动作的专家角色，如网络浏览器、API调用程序、脚本执行程序等（包括安全问题）。
+大师（BigRole）的角色：整合若干专家成员功能的大师级角色
+……</p>
 
-<p>Behind all these scenarios, we utilize the <code class="language-plaintext highlighter-rouge">vectorStore</code>/<code class="language-plaintext highlighter-rouge">LLM</code>s, to match the exact <code class="language-plaintext highlighter-rouge">ChatRoles</code> to your conversation.</p>
+<p>您可以直接在聊天框旁创建、验证、改进或报告你自己的ChatRole，，最重要的是您可以很方便的与专家库中任意一个ChatRoles专家互动，借鉴他们的意见！</p>
 
-<p>More over, letting <code class="language-plaintext highlighter-rouge">ChatRoles</code> to have sub-conversations, has the advantage to control the context length, as the big boss, you needn’t know about each details, and things are settled!</p>
+<p>在所有这些场景背后，我们利用vectorStore/LLMs规则，为您的对话匹配最合适的ChatRoles专家成员。</p>
 
-<p>First things first, we are defining the specifications for <code class="language-plaintext highlighter-rouge">ChatRoles</code> and <code class="language-plaintext highlighter-rouge">coordination</code>s!</p>
+<p>此外，让ChatRoles的专家们进行小窗对话的优势在于控制聊天上下文的长度，您不必了解每个细节，专家们会轻松解决您的问题！</p>
 
-<p>So, stay tuned.</p>
+<p>我们首先要做的是，定义ChatRoles专家库的规范和协作规则！</p>
+
+<p>所以，请持续保持关注。</p>
 
 
           </div>

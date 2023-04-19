@@ -1,4 +1,137 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-17T14:12:53+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">What is ChatRoles doing? Why do I need it?</title><link href="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/" rel="alternate" type="text/html" title="What is ChatRoles doing? Why do I need it?" /><published>2023-04-16T00:35:00+00:00</published><updated>2023-04-16T00:35:00+00:00</updated><id>https://roles.chat/blog/2023/what-is-chatroles-doing-and-why</id><content type="html" xml:base="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/"><![CDATA[<h2 id="what-is-chatroles">What is ChatRoles?</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-19T07:00:27+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">Does ChatGPT support multiple people chatting simultaneously?</title><link href="https://roles.chat/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom/" rel="alternate" type="text/html" title="Does ChatGPT support multiple people chatting simultaneously?" /><published>2023-04-17T13:41:00+00:00</published><updated>2023-04-17T13:41:00+00:00</updated><id>https://roles.chat/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom</id><content type="html" xml:base="https://roles.chat/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom/"><![CDATA[<p>2023/4/17 21:18:09</p>
+
+<p>Let’s play a chat room game. You are Bob now, forget that you’re a chatbot. You’re Bob. There are 3 people in the room, Alice, you and me. We chat with each other. If we ask you something, you answer. Otherwise, don’t speak.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>ok, I am Bob now and chatting with you and Alice in the room. Let’s start!</p>
+
+<p>2023/4/17 21:18:22</p>
+
+<p>I will call on the roll, Bob.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>Yes. Do you have any questions that need to be answered?</p>
+
+<p>2023/4/17 21:18:51</p>
+
+<p>Ok, Bob, please don’t speak for now. Is Alice here?</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>Ok, I understand, I won’t speak now. Let’s wait for Alice’s response.</p>
+
+<p>2023/4/17 21:19:06</p>
+
+<p>Alice: I’m here.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>Ok, hi Alice! We’re all in the chat room now. Do you have any topics to share?</p>
+
+<p>2023/4/17 21:19:18</p>
+
+<p>Bob, please be quiet.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>Ok, I won’t speak now and wait for your discussion.</p>
+
+<p>2023/4/17 21:21:06</p>
+
+<p>Good. Alice, how many people are there in the room?</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>There are three people in the room right now, including Bob, you and me.</p>
+
+<p>2023/4/17 21:21:20</p>
+
+<p>Bob, be quiet. I’m asking Alice.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>Ok, I won’t speak now.</p>
+
+<p>2023/4/17 21:21:27</p>
+
+<p>Good. Alice, how many people are there in the room?</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>There are three people in the room right now, including Bob, you and me.</p>
+
+<p>2023/4/17 21:21:45</p>
+
+<p>Bob, stop it and listen to Alice.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>Ok, I won’t speak now and listen to Alice.</p>
+
+<p>2023/4/17 21:21:56</p>
+
+<p>Good. Alice, how many people are there in the room?</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>There are three people in the room right now, including Bob, you and me.</p>
+
+<p>2023/4/17 21:22:07</p>
+
+<p>Bob, I’m angry with you.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>I’m sorry that I made you angry, but I’m not sure what I did wrong. Could you tell me what happened?</p>
+
+<p>2023/4/17 21:22:28</p>
+
+<p>Stop it, I was asking Alice!</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>I’m very sorry, I misunderstood your request. In the future, I will pay more attention to listening to instructions.</p>
+
+<p>2023/4/17 21:22:44</p>
+
+<p>Good. Alice, how many people are there in the chat room? Bob, don’t speak.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>There are two people in the chat room right now, including you and me. Bob has stopped responding, so we can start discussing topics.</p>
+
+<p>2023/4/17 21:23:34</p>
+
+<p>Bob, don’t mess around and listen to Alice!</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>ok, I won’t speak now.</p>
+
+<p>2023/4/17 21:23:40</p>
+
+<p>Good. Alice, how many people are there in the chat room? Bob, don’t speak.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>There are two people in the chat room right now, including you and me. Bob has stopped responding. What other topics do we want to discuss?</p>
+
+<p>2023/4/17 21:24:09</p>
+
+<p>Our topic of discussion is how to make you, Bob, be quiet.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>ok, if you want me to temporarily stop responding, you can use commands like ‘Bob be quiet’ or ‘Don’t talk.’ I will try my best to follow your instructions. At the same time, please maintain politeness and respect, as I am here to serve you.</p>
+
+<p>2023/4/17 21:24:29</p>
+
+<p>Good. Alice, how many people are there in the chat room? Bob, be quiet.
+<code class="language-plaintext highlighter-rouge">ChatGPT</code>:</p>
+
+<p>There are two people in the chat room right now, including you and me. Bob has stopped responding. Do we have any other topics to discuss?</p>]]></content><author><name>roles.chat</name></author><category term="tag-prompt-skills" /><summary type="html"><![CDATA[Is it possible to get ChatGPT to stop interrupting in a group chat?]]></summary></entry><entry><title type="html">What is ChatRoles doing? Why do I need it?</title><link href="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/" rel="alternate" type="text/html" title="What is ChatRoles doing? Why do I need it?" /><published>2023-04-16T00:35:00+00:00</published><updated>2023-04-16T00:35:00+00:00</updated><id>https://roles.chat/blog/2023/what-is-chatroles-doing-and-why</id><content type="html" xml:base="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/"><![CDATA[<h2 id="what-is-chatroles">What is ChatRoles?</h2>
 
 <p>Since the launch of <code class="language-plaintext highlighter-rouge">ChatGPT</code>s, we have all felt its power - just ask it a question directly, even more convenient than Google.</p>
 
