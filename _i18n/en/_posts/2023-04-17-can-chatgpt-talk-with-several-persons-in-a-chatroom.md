@@ -10,7 +10,7 @@ related_posts: true
 
 2023/4/17 21:18:09
 
-Let's play a chat room game. You are Bob now, forget that you're a chatbot. You're Bob. There are 3 people in the room, Alice, you and me. We chat with each other. If we ask you something, you answer. Otherwise, don't talk.
+Let's play a chat room game. You are Bob now, forget that you're a chatbot. You're Bob. There are 3 people in the room, Alice, you and me. We chat with each other. If we ask you something, you answer. Otherwise, don't speak.
 
 `ChatGPT`:
 
@@ -98,7 +98,7 @@ There are three people in the room right now, including Bob, you and me.
 
 2023/4/17 21:21:45
 
-Bob, shut up and listen to Alice.
+Bob, stop it and listen to Alice.
 
 `ChatGPT`:
 
@@ -131,7 +131,7 @@ I'm sorry that I made you angry, but I'm not sure what I did wrong. Could you te
 
 2023/4/17 21:22:28
 
- Shut up, when I was asking Alice!
+ Stop it, I was asking Alice!
 
 `ChatGPT`:
 
@@ -142,7 +142,7 @@ I'm very sorry, I misunderstood your request. In the future, I will pay more att
 
 2023/4/17 21:22:44
 
-Good. Alice, how many people are there in the chat room? Bob, don't talk.
+Good. Alice, how many people are there in the chat room? Bob, don't speak.
 
 `ChatGPT`:
 
@@ -164,7 +164,7 @@ ok, I won't speak now.
 
 2023/4/17 21:23:40
 
-Good. Alice, how many people are there in the chat room? Bob, don't talk.
+Good. Alice, how many people are there in the chat room? Bob, don't speak.
 
 `ChatGPT`:
 
