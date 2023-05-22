@@ -13,23 +13,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>What is ChatRoles doing? Why do I need it? | roles.chat</title>
+<title>Does ChatGPT support tree-structured conversations context? | roles.chat</title>
 <meta name="author" content="roles.chat">
-<meta name="description" content="A brief introduction on how ChatRoles works, why do we need it, and how to use it.">
+<meta name="description" content="As the chat deepens, there will be more and more branching subtopics. Does ChatGPT support branching context? The experiment reveals the answer.">
     <meta name="keywords" content="LLM, ChatGPT, GPT, prompt, prompt roles, prompt instructions, roles chat, chat roles, ChatRoles, ChatTree, fine-tune">
 <!-- OpenGraph -->
     <meta property="og:site_name" content="roles.chat">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="What is ChatRoles doing? Why do I need it? | roles.chat">
-    <meta property="og:url" content="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/">
-    <meta property="og:description" content="A brief introduction on how ChatRoles works, why do we need it, and how to use it.">
+    <meta property="og:title" content="Does ChatGPT support tree-structured conversations context? | roles.chat">
+    <meta property="og:url" content="https://roles.chat/blog/2023/does-chatgpt-support-tree-structured-conversation-context/">
+    <meta property="og:description" content="As the chat deepens, there will be more and more branching subtopics. Does ChatGPT support branching context? The experiment reveals the answer.">
     
     <meta property="og:locale" content="en">
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="What is ChatRoles doing? Why do I need it? | roles.chat">
-    <meta name="twitter:description" content="A brief introduction on how ChatRoles works, why do we need it, and how to use it.">
+    <meta name="twitter:title" content="Does ChatGPT support tree-structured conversations context? | roles.chat">
+    <meta name="twitter:description" content="As the chat deepens, there will be more and more branching subtopics. Does ChatGPT support branching context? The experiment reveals the answer.">
     
     
 
@@ -41,10 +41,10 @@
           "@type": "Person",
           "name": "roles.chat"
         },
-        "url": "https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/",
+        "url": "https://roles.chat/blog/2023/does-chatgpt-support-tree-structured-conversation-context/",
         "@type": "WebSite",
-        "description": "A brief introduction on how ChatRoles works, why do we need it, and how to use it.",
-        "headline": "What is ChatRoles doing? Why do I need it? | roles.chat",
+        "description": "As the chat deepens, there will be more and more branching subtopics. Does ChatGPT support branching context? The experiment reveals the answer.",
+        "headline": "Does ChatGPT support tree-structured conversations context? | roles.chat",
         
         "name": "roles.chat",
         "@context": "https://schema.org"
@@ -69,7 +69,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://roles.chat/blog/2023/what-is-chatroles-doing-and-why/">
+    <link rel="canonical" href="https://roles.chat/blog/2023/does-chatgpt-support-tree-structured-conversation-context/">
     
     <!-- Dark Mode -->
     
@@ -139,7 +139,7 @@
           <!-- Toogle language -->
               <li class="nav-item">
                 
-                <a class="nav-link" href="/zh-cn/blog/2023/what-is-chatroles-doing-and-why/">中 文</a>
+                <a class="nav-link" href="/zh-cn/blog/2023/does-chatgpt-support-tree-structured-conversation-context/">中 文</a>
                 
               </li>
 </ul>
@@ -163,81 +163,94 @@
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">What is ChatRoles doing? Why do I need it?</h1>
-    <p class="post-meta">April 16, 2023</p>
+    <h1 class="post-title">Does ChatGPT support tree-structured conversations context?</h1>
+    <p class="post-meta">May 18, 2023</p>
     <p class="post-tags">
       <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
         ·  
-        <a href="/blog/tag/tag-quick-start">
-          <i class="fas fa-hashtag fa-sm"></i> quick start</a>  
-          
-        ·  
-        <a href="/blog/category/quick-start">
-          <i class="fas fa-tag fa-sm"></i> quick-start</a>  
+        <a href="/blog/tag/tag-prompt-skills">
+          <i class="fas fa-hashtag fa-sm"></i> prompt skills</a>  
           
 
     </p>
   </header>
 
   <article class="post-content">
-    <h2 id="what-is-chatroles">What is ChatRoles?</h2>
+    <p>2023/5/19 01:47:09</p>
 
-<p>Since the launch of <code class="language-plaintext highlighter-rouge">ChatGPT</code>s, we have all felt its power - just ask it a question directly, even more convenient than Google.</p>
+<p>Long time no see! What a busy month..</p>
 
-<p><code class="language-plaintext highlighter-rouge">ChatRoles</code> is a task processing service built on the basis of <code class="language-plaintext highlighter-rouge">ChatGPT</code>s. So why do we need <code class="language-plaintext highlighter-rouge">ChatRoles</code> instead of directly asking <code class="language-plaintext highlighter-rouge">ChatGPT</code>s?</p>
+<p>I’glad to come back to share, that the backend service for https://repo.roles.chat is almost ready for beta.</p>
 
-<p>In one word, when a problem/task is too complex and requires <strong>over thousands</strong> of Q&amp;As to clarify, we need a method to break down the task and assign it to multiple roles for execution.</p>
+<p>Today let’s do a small experiment, “Does ChatGPT support branching contexts?”</p>
 
-<p>This can include tasks such as market research, writing a novel, developing a game, or even mundane tasks like installing software.</p>
+<p>What does it mean? Let’s take an example.</p>
+<blockquote>
+  <p>Note: The context is maintained through <code class="language-plaintext highlighter-rouge">parentMessageId</code>, indicating which sentence this one follows.</p>
+</blockquote>
 
-<p>The <code class="language-plaintext highlighter-rouge">ChatTree</code> structure, proposed by <code class="language-plaintext highlighter-rouge">ChatRoles</code>, is a tree-like chat structure where tasks are broken down and executed in small groups before being consolidated in a larger group for delivery of results.</p>
+<p><strong>The following Q&amp;A will be presented in chronological order.</strong></p>
 
-<h2 id="why-do-we-need-chatroles">Why do we need ChatRoles?</h2>
+<hr>
 
-<p>So why do we have to make it so complicated?</p>
+<ul>
+  <li>Q1:  Who was Gauss?</li>
+  <li>
+    <p>A1: Carl Friedrich Gauss was a famous German mathematician, astronomer, physicist, and geographer of the 18th-19th centuries, known as the “father of modern mathematics”. He made numerous pioneering contributions to fields such as mathematics, statistics, geometry, physics, and astronomy. His most famous works include Gaussian functions and their applications in various fields, Gaussian elimination method, and normal distribution, among others. In addition, he invented the Gauss lens and conducted many geographic survey works, and is considered one of the pioneers of modern science.</p>
+  </li>
+  <li>Q2: Who was his wife?</li>
+  <li>A2: Gauss’s wife was named Johanna Maria Walpurga, and they were married in 1805. Johanna was a talented woman and also an outstanding mathematician who greatly assisted Gauss in his academic career.
+    <blockquote>
+      <p>This is just BS, don’t sweat it.</p>
+    </blockquote>
+  </li>
+  <li>Q2.1: When was she born?</li>
+  <li>A2.1: Johanna Maria Walpurga was born on October 16, 1777.
+    <blockquote>
+      <p>The “she” mentioned here is understood correctly.</p>
+    </blockquote>
+  </li>
+  <li>Q1.1: How many children did he have?</li>
+  <li>
+    <p>A1.1: Gauss had a total of six children, three sons and three daughters. His two eldest sons became famous mathematicians, with the oldest son Joseph Fourier Gauss being a renowned analytic number theorist, and the second son Eugene Gauss making important contributions to thermodynamics and electromagnetism as a physicist.</p>
+  </li>
+  <li>Q2.2: When did she die?</li>
+  <li>A2.2: Johanna Maria Walpurga passed away on August 9, 1854, at the age of 76.
+    <blockquote>
+      <p>Well done！</p>
+    </blockquote>
+  </li>
+  <li>Q1.2: When was the person who did physics born?</li>
+  <li>A1.2: Eugene Gauss, the second son of Gauss, was born in 1811. He was a famous physicist who made important contributions to thermodynamics and electromagnetism.
+    <blockquote>
+      <p>Interjecting questions is effortless.</p>
+    </blockquote>
+  </li>
+  <li>Q1.3: When was the person who did mathematics born?</li>
+  <li>
+    <p>A1.3: Joseph Fourier Gauss, the eldest of Gauss’s three sons, was born in 1792. He was also Gauss’s only son who survived into adulthood and became a famous mathematician.</p>
+  </li>
+  <li>Q1.4.1: When did he die?</li>
+  <li>A1.4.1: Gauss passed away on February 23, 1855 at the age of 77.
+    <blockquote>
+      <p>This “he” is ambiguous, and GPT will not ask for clarification. It chooses one interpretation to provide an answer.</p>
+    </blockquote>
+  </li>
+  <li>Q1.4.2:  When did this son pass away?</li>
+  <li>
+    <p>A1.4.2: Eugene Gauss passed away in 1889 at the age of 78.</p>
+  </li>
+  <li>Q2.3: When did Gauss meet her?</li>
+  <li>A2.3: Gauss met Johanna Maria Magdalena Waldeck in 1800 when he was studying mathematics and astronomy and serving as a professor at the University of Göttingen. The two married in 1805.
+    <blockquote>
+      <p>No problem.</p>
+    </blockquote>
+  </li>
+</ul>
 
-<p>This involves several technical issues.</p>
+<h2 id="summary">Summary</h2>
 
-<h5 id="contextual-constraints">Contextual constraints</h5>
-
-<p>First, <code class="language-plaintext highlighter-rouge">ChatGPT</code>s has a ~4k~30k tokens limitation. This means that if you chat with it too much, it will <strong>forget</strong> the previous conversation and won’t be able to handle too complex problems.</p>
-
-<p>Therefore, using the context structure of <code class="language-plaintext highlighter-rouge">ChatTree</code>, subtasks can be split into sub-conversations, which won’t enlarge the main context length. <code class="language-plaintext highlighter-rouge">ChatRoles</code> works like team members who cooperate and communicate privately. As the big boss, you don’t need to grasp each details.</p>
-
-<h5 id="automation">Automation</h5>
-
-<p>If a task involves thousands or more Q&amp;As, you probably wouldn’t want to follow up on every details. Therefore, it’s necessary to leverage the ability of the <code class="language-plaintext highlighter-rouge">ChatGPT</code> role-playing to enable multiple <code class="language-plaintext highlighter-rouge">ChatRoles</code> to communicate with each other automatically.</p>
-
-<h5 id="fine-tuned-models">Fine-tuned models</h5>
-
-<p>Some <code class="language-plaintext highlighter-rouge">ChatRoles</code> require not only role-playing, but also specific professional skills, such as the Medical Expert role. We can fine-tune a model for the specific domain and make it available in the <code class="language-plaintext highlighter-rouge">ChatRoles</code> repo for community to use.</p>
-
-<h5 id="task-knowledge-base">Task knowledge base</h5>
-
-<p>Each task has its own dedicated knowledge base. For example, when developing a game app, you can consult with experts in the <code class="language-plaintext highlighter-rouge">ChatRoles</code> repo, including requirements analysts, architects, developers, etc. They’ll firstly build various documentation and design based on your requirements, then code repo. All these need to be easy to query and update by <code class="language-plaintext highlighter-rouge">ChatRoles</code>.</p>
-
-<p>These are implemented through a specifically designed <code class="language-plaintext highlighter-rouge">VectorStore</code> infrastructures.</p>
-
-<h2 id="how-to-use-chatroles">How to use ChatRoles?</h2>
-
-<p>There are the following ways to use <code class="language-plaintext highlighter-rouge">ChatRoles</code>.</p>
-
-<h5 id="chatbox-user">
-<code class="language-plaintext highlighter-rouge">ChatBox</code> user</h5>
-
-<p>It’s basically the same as chatting with <code class="language-plaintext highlighter-rouge">ChatGPT</code>. The only difference is that when you input your question, we will automatically recommend some related <code class="language-plaintext highlighter-rouge">ChatRoles</code> you can chat with, so that you can get better answers.</p>
-
-<h5 id="chatroles-user">ChatRoles user</h5>
-
-<p>Here, you can create/train/tune your own <code class="language-plaintext highlighter-rouge">ChatRoles</code>, contribute to the repo, and share them with the community.</p>
-
-<h5 id="chatroles-coordinator">ChatRoles coordinator</h5>
-
-<p>As a coordinator user, the main goal is to effectively organize multiple <code class="language-plaintext highlighter-rouge">ChatRoles</code> and build a <code class="language-plaintext highlighter-rouge">BigRole</code>, in order to accomplish more complex tasks.</p>
-
-<h5 id="chatroles-developer">ChatRoles developer</h5>
-
-<p><code class="language-plaintext highlighter-rouge">ChatRoles</code> can not only converse with people, but also with third-party services such as APIs, web, databases, shells, etc. This requires developers to do some driver-like development work. We look forward to building this together with community. Remember, the first rule is <strong>SECURITY</strong>.</p>
+<p>Based on <code class="language-plaintext highlighter-rouge">parentMessageId</code>, GPT supports tree-structured conversation context, providing a fundamental support for nested tasks.</p>
 
   </article>
 
@@ -255,13 +268,13 @@
   
 
   <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/does-chatgpt-support-tree-structured-conversation-context/">Does ChatGPT support tree-structured conversations context?</a>
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom/">Does ChatGPT support multiple people chatting simultaneously?</a>
   </li>
 
   
 
   <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom/">Does ChatGPT support multiple people chatting simultaneously?</a>
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/what-is-chatroles-doing-and-why/">What is ChatRoles doing? Why do I need it?</a>
   </li>
 
 <div id="giscus_thread" style="max-width: 800px; margin: 0 auto;">

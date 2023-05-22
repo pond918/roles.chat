@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-18T18:30:29+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">Does ChatGPT support multiple people chatting simultaneously?</title><link href="https://roles.chat/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom/" rel="alternate" type="text/html" title="Does ChatGPT support multiple people chatting simultaneously?" /><published>2023-04-17T13:41:00+00:00</published><updated>2023-04-17T13:41:00+00:00</updated><id>https://roles.chat/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom</id><content type="html" xml:base="https://roles.chat/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom/"><![CDATA[<p>2023/4/17 21:18:09</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-22T08:07:09+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">Does ChatGPT support tree-structured conversations context?</title><link href="https://roles.chat/blog/2023/does-chatgpt-support-tree-structured-conversation-context/" rel="alternate" type="text/html" title="Does ChatGPT support tree-structured conversations context?" /><published>2023-05-18T17:47:09+00:00</published><updated>2023-05-18T17:47:09+00:00</updated><id>https://roles.chat/blog/2023/does-chatgpt-support-tree-structured-conversation-context</id><content type="html" xml:base="https://roles.chat/blog/2023/does-chatgpt-support-tree-structured-conversation-context/"><![CDATA[<p>2023/5/19 01:47:09</p>
+
+<p>Long time no see! What a busy month..</p>
+
+<p>I’glad to come back to share, that the backend service for https://repo.roles.chat is almost ready for beta.</p>
+
+<p>Today let’s do a small experiment, “Does ChatGPT support branching contexts?”</p>
+
+<p>What does it mean? Let’s take an example.</p>
+<blockquote>
+  <p>Note: The context is maintained through <code class="language-plaintext highlighter-rouge">parentMessageId</code>, indicating which sentence this one follows.</p>
+</blockquote>
+
+<p><strong>The following Q&amp;A will be presented in chronological order.</strong></p>
+
+<hr />
+
+<ul>
+  <li>Q1:  Who was Gauss?</li>
+  <li>
+    <p>A1: Carl Friedrich Gauss was a famous German mathematician, astronomer, physicist, and geographer of the 18th-19th centuries, known as the “father of modern mathematics”. He made numerous pioneering contributions to fields such as mathematics, statistics, geometry, physics, and astronomy. His most famous works include Gaussian functions and their applications in various fields, Gaussian elimination method, and normal distribution, among others. In addition, he invented the Gauss lens and conducted many geographic survey works, and is considered one of the pioneers of modern science.</p>
+  </li>
+  <li>Q2: Who was his wife?</li>
+  <li>A2: Gauss’s wife was named Johanna Maria Walpurga, and they were married in 1805. Johanna was a talented woman and also an outstanding mathematician who greatly assisted Gauss in his academic career.
+    <blockquote>
+      <p>This is just BS, don’t sweat it.</p>
+    </blockquote>
+  </li>
+  <li>Q2.1: When was she born?</li>
+  <li>A2.1: Johanna Maria Walpurga was born on October 16, 1777.
+    <blockquote>
+      <p>The “she” mentioned here is understood correctly.</p>
+    </blockquote>
+  </li>
+  <li>Q1.1: How many children did he have?</li>
+  <li>
+    <p>A1.1: Gauss had a total of six children, three sons and three daughters. His two eldest sons became famous mathematicians, with the oldest son Joseph Fourier Gauss being a renowned analytic number theorist, and the second son Eugene Gauss making important contributions to thermodynamics and electromagnetism as a physicist.</p>
+  </li>
+  <li>Q2.2: When did she die?</li>
+  <li>A2.2: Johanna Maria Walpurga passed away on August 9, 1854, at the age of 76.
+    <blockquote>
+      <p>Well done！</p>
+    </blockquote>
+  </li>
+  <li>Q1.2: When was the person who did physics born?</li>
+  <li>A1.2: Eugene Gauss, the second son of Gauss, was born in 1811. He was a famous physicist who made important contributions to thermodynamics and electromagnetism.
+    <blockquote>
+      <p>Interjecting questions is effortless.</p>
+    </blockquote>
+  </li>
+  <li>Q1.3: When was the person who did mathematics born?</li>
+  <li>
+    <p>A1.3: Joseph Fourier Gauss, the eldest of Gauss’s three sons, was born in 1792. He was also Gauss’s only son who survived into adulthood and became a famous mathematician.</p>
+  </li>
+  <li>Q1.4.1: When did he die?</li>
+  <li>A1.4.1: Gauss passed away on February 23, 1855 at the age of 77.
+    <blockquote>
+      <p>This “he” is ambiguous, and GPT will not ask for clarification. It chooses one interpretation to provide an answer.</p>
+    </blockquote>
+  </li>
+  <li>Q1.4.2:  When did this son pass away?</li>
+  <li>
+    <p>A1.4.2: Eugene Gauss passed away in 1889 at the age of 78.</p>
+  </li>
+  <li>Q2.3: When did Gauss meet her?</li>
+  <li>A2.3: Gauss met Johanna Maria Magdalena Waldeck in 1800 when he was studying mathematics and astronomy and serving as a professor at the University of Göttingen. The two married in 1805.
+    <blockquote>
+      <p>No problem.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="summary">Summary</h2>
+
+<p>Based on <code class="language-plaintext highlighter-rouge">parentMessageId</code>, GPT supports tree-structured conversation context, providing a fundamental support for nested tasks.</p>]]></content><author><name>roles.chat</name></author><category term="tag-prompt-skills" /><summary type="html"><![CDATA[As the chat deepens, there will be more and more branching subtopics. Does ChatGPT support branching context? The experiment reveals the answer.]]></summary></entry><entry><title type="html">Does ChatGPT support multiple people chatting simultaneously?</title><link href="https://roles.chat/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom/" rel="alternate" type="text/html" title="Does ChatGPT support multiple people chatting simultaneously?" /><published>2023-04-17T13:41:00+00:00</published><updated>2023-04-17T13:41:00+00:00</updated><id>https://roles.chat/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom</id><content type="html" xml:base="https://roles.chat/blog/2023/can-chatgpt-talk-with-several-persons-in-a-chatroom/"><![CDATA[<p>2023/4/17 21:18:09</p>
 
 <p>Let’s play a chat room game. You are Bob now, forget that you’re a chatbot. You’re Bob. There are 3 people in the room, Alice, you and me. We chat with each other. If we ask you something, you answer. Otherwise, don’t speak.</p>
 
