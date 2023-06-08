@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="zh-cn" /><updated>2023-06-08T13:06:19+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">快速了解 chat-roles-repo 服务</title><link href="https://roles.chat/blog/2023/introduction-to-chat-roles-repo/" rel="alternate" type="text/html" title="快速了解 chat-roles-repo 服务" /><published>2023-06-08T13:01:00+00:00</published><updated>2023-06-08T13:01:00+00:00</updated><id>https://roles.chat/blog/2023/introduction-to-chat-roles-repo</id><content type="html" xml:base="https://roles.chat/blog/2023/introduction-to-chat-roles-repo/"><![CDATA[<h2 id="chat-roles-repo-是什么">chat-roles-repo 是什么</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="zh-cn" /><updated>2023-06-08T13:19:36+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">快速了解 chat-roles-repo 服务</title><link href="https://roles.chat/blog/2023/introduction-to-chat-roles-repo/" rel="alternate" type="text/html" title="快速了解 chat-roles-repo 服务" /><published>2023-06-08T13:01:00+00:00</published><updated>2023-06-08T13:01:00+00:00</updated><id>https://roles.chat/blog/2023/introduction-to-chat-roles-repo</id><content type="html" xml:base="https://roles.chat/blog/2023/introduction-to-chat-roles-repo/"><![CDATA[<h2 id="chat-roles-repo-是什么">chat-roles-repo 是什么</h2>
 
 <p>一个chat-roles仓库。在此你可以：</p>
 
@@ -107,12 +107,16 @@
 
 <ul>
   <li>members: 团队成员，也就是另一个role</li>
-  <li>tools: 工具插件</li>
+  <li>tools: 工具插件，</li>
 </ul>
 
 <p>比如你造车，需要一个扳手(tool)和一个工程师(member), 成员都是有名有姓的，所以挂在 “members” 下面。</p>
 
 <p>llm就是一个chat-GPT一样的工具，将用户的问题发给llm，拿到返回结果，</p>
+
+<blockquote>
+  <p>内置的工具有很多：llm, restAPI, json, db.. 开发人员可以申请注册更多工具插件</p>
+</blockquote>
 
 <p>@RR#list意思是将结果发给 RR 的 list 入口。RR 就是接下来要说的，第3个role。</p>
 
