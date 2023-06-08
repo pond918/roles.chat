@@ -105,11 +105,13 @@ chat-roles-repo中已经预定义了3个创世roles：
 这些都是他的合作伙伴。partners分2种：
 
 - members: 团队成员，也就是另一个role
-- tools: 工具插件
+- tools: 工具插件，
 
 比如你造车，需要一个扳手(tool)和一个工程师(member), 成员都是有名有姓的，所以挂在 "members" 下面。
 
 llm就是一个chat-GPT一样的工具，将用户的问题发给llm，拿到返回结果，
+
+> 内置的工具有很多：llm, restAPI, json, db.. 开发人员可以申请注册更多工具插件
 
 @RR#list意思是将结果发给 RR 的 list 入口。RR 就是接下来要说的，第3个role。
 
