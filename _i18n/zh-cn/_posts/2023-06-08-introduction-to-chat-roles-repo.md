@@ -165,7 +165,7 @@ llm就是一个chat-GPT一样的工具，将用户的问题发给llm，拿到返
 
 简单来说，RR拿到内容后，根据提示语模版(prompt)发给llm，生成该内容相关的professionals和skills，再通过restAPI调用我们的vector database，搜索仓库里所有的chat-roles，返回最匹配的roles list。
 
-> 该host的详细定义可参阅 [这里](https://chatroles.onrender.com/api/hosts/roles-role-host)
+> 该host的详细定义可参阅 [这里](https://chatroles.onrender.com/docs/api#/chat-roles%20implementation/HostsController_findOne)，点"Try it out"，id填 roles-role-host
 
 终于定义好一个有用的角色了，迫切需要试用一下：
 
