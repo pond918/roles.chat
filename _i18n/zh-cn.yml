@@ -1,4 +1,7 @@
 
+en: English
+zh-cn: 中 文
+
 titles:
   home: 首页
   index: 告诉 AI Roles, 他们会搞定一切!
@@ -21,7 +24,7 @@ descriptions:
   archive-tag: 此标签的文章归档
   archive-year: 当年的文章归档
   blog: blogging
-  projects: A growing collection of your cool projects.
+  projects: A growing collection of our cool projects.
   repositories: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
   teaching: Materials for courses you taught. Replace this text with your description.
   unk: 看起来不太对劲，这里一片荒芜...
@@ -45,6 +48,24 @@ blog:
   name: Roles.Chat
   nav_title: 博客 # your blog must have a title for it to be displayed in the nav bar
 
+projects:
+  titles:
+    project1: Project 1
+    project2: Project 2
+    project3: Project 3
+    project4: Project 4
+    project5: Project 5
+    project6: Project 6
+  descriptions:
+    project1: a project with a background image
+    project2: a project with a background image
+    project3: a project that redirects to another website
+    project4: another without an image
+    project5: a project with a background image
+    project6: a project with no image
+  categories:
+    fun: fun
+    work: work
 repositories:
   users: GitHub 用户
   repos: GitHub 仓库
@@ -52,6 +73,7 @@ repositories:
 # tags:
 tag-quick-start: 快速上手
 tag-prompt-skills: 提示语技巧
+tag-services: 服务
 tag-images: 图片
 tag-links: 链接
 tag-math: 数学

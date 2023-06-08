@@ -8,8 +8,6 @@ giscus_comments: true
 related_posts: true
 ---
 
-2023/5/19 01:47:09
-
 Long time no see! What a busy month..
 
 I’glad to come back to share, that the backend service for https://repo.roles.chat is almost ready for beta.

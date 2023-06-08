@@ -8,8 +8,6 @@ giscus_comments: true
 related_posts: true
 ---
 
-2023/5/19 01:47:09
-
 漫长的一个月。。
 
 值得庆祝的是，https://repo.roles.chat 服务系统快要beta了~
