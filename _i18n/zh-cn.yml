@@ -50,14 +50,14 @@ blog:
 
 projects:
   titles:
-    project1: Project 1
+    chat-roles-repo: chat-roles-repo
     project2: Project 2
     project3: Project 3
     project4: Project 4
     project5: Project 5
     project6: Project 6
   descriptions:
-    project1: a project with a background image
+    chat-roles-repo: restAPI服务，使用和创建社区中，每个人共享的rolebots机器人
     project2: a project with a background image
     project3: a project that redirects to another website
     project4: another without an image

@@ -1,71 +1,23 @@
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+chat-roles-repo提供了一组[restAPI服务](https://chatroles.onrender.com/docs/api#/), 让每一个人都能方便快捷地使用社区共享的chat-roles rolebots。
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+## chat-roles 有什么用
 
-    ---
-    layout: page
-    title: project
-    description: Chat-Roles-Repo
-    img: /assets/img/12.jpg
-    ---
+我们都知道，当我们给LLMs（如chat-GPT），提一个问题，它能帮我们回答问题或者生成文章。
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+那么如果我们向一个chat-role提一个要求，这个rolebot自动将这个要求转化为成百上千个小任务，交给其他的rolebots共同完成，rolebots各司其职，像一个团队一样合作。
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+最后交付给你的结果，一定是前所未有的。
 
+## chat-roles-repo 的优势是什么
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+基于chat-roles-repo服务，我们定义了[roles, hosts, actors结构](https://roles.chat/blog/2023/introduction-to-chat-roles-repo/)，目的是让社区中每一个人，都能方便地共享和使用强大的，目标明确的rolebots。
 
+用流行的话来说，就是
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+`Prompt as Code`
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+人人都能编写强大的智能机器人。
+
+## 下一步是什么
+
+为了这个愿景，基于`chat-roles-repo`，我们将继续开发一个chatbox web/桌面 应用，让创建和使用chat-roles唾手可得

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: projects.titles.project1
-description: projects.descriptions.project1
+title: projects.titles.chat-roles-repo
+description: projects.descriptions.chat-roles-repo
 img: assets/img/12.jpg
 importance: 1
 category: work
