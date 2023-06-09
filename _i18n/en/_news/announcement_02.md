@@ -1,2 +1,2 @@
 
-our first [chat-roles-repo](https://chatroles.onrender.com/docs/api#/) restAPI service GOES ONLINE :smile: :sparkles:
+our first [chat-roles-repo](https://repo-sandbox.roles.chat/docs/api#/) restAPI service GOES ONLINE :smile: :sparkles:

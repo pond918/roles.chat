@@ -2,7 +2,7 @@
 layout: post
 title: 快速了解 chat-roles-repo 服务
 date: 2023-06-08 21:01:00+0800
-description: 首个 chat-roles-repo 服务已发布到 (沙箱)[https://chatroles.onrender.com/docs/api#/].
+description: 首个 chat-roles-repo 服务已发布到 (沙箱)[https://repo-sandbox.roles.chat/docs/api#/].
 tags: tag-quick-start tag-services
 giscus_comments: true
 related_posts: true
@@ -42,7 +42,7 @@ chat-roles-repo中已经预定义了3个创世roles：
 
 该role的目标就是啥也不干。系统中用来关联到每个用户（包括你:）。所以你的角色就是，像boss一样，啥也不干 ;)
 
-> 要创建你自己的chat-roles，请参阅 [roles API](https://chatroles.onrender.com/docs/api#/chat-roles)
+> 要创建你自己的chat-roles，请参阅 [roles API](https://repo-sandbox.roles.chat/docs/api#/chat-roles)
 
 ### #2 chat-role
 
@@ -115,7 +115,7 @@ llm就是一个chat-GPT一样的工具，将用户的问题发给llm，拿到返
 
 @RR#list意思是将结果发给 RR 的 list 入口。RR 就是接下来要说的，第3个role。
 
-> role-host相关的操作，请参阅 [host API](https://chatroles.onrender.com/docs/api#/chat-roles%20implementation)
+> role-host相关的操作，请参阅 [host API](https://repo-sandbox.roles.chat/docs/api#/chat-roles%20implementation)
 
 ### #3 roles-role
 
@@ -165,15 +165,15 @@ llm就是一个chat-GPT一样的工具，将用户的问题发给llm，拿到返
 
 简单来说，RR拿到内容后，根据提示语模版(prompt)发给llm，生成该内容相关的professionals和skills，再通过restAPI调用我们的vector database，搜索仓库里所有的chat-roles，返回最匹配的roles list。
 
-> 该host的详细定义可参阅 [这里](https://chatroles.onrender.com/docs/api#/chat-roles%20implementation/HostsController_findOne)，点"Try it out"，id填 roles-role-host
+> 该host的详细定义可参阅 [这里](https://repo-sandbox.roles.chat/docs/api#/chat-roles%20implementation/HostsController_findOne)，点"Try it out"，id填 roles-role-host
 
 终于定义好一个有用的角色了，迫切需要试用一下：
 
 ### role-actor
 
-要使用一个现有的role，你要为这个role[创建一个actor](https://chatroles.onrender.com/docs/api#/chat-actors/ActorsController_create)，
+要使用一个现有的role，你要为这个role[创建一个actor](https://repo-sandbox.roles.chat/docs/api#/chat-actors/ActorsController_create)，
 
-然后你就可以和他[聊天](https://chatroles.onrender.com/docs/api#/chat-APIs)，或者[api调用](https://chatroles.onrender.com/docs/api#/chat-APIs)，集成到你自己的系统中去了。
+然后你就可以和他[聊天](https://repo-sandbox.roles.chat/docs/api#/chat-APIs)，或者[api调用](https://repo-sandbox.roles.chat/docs/api#/chat-APIs)，集成到你自己的系统中去了。
 
 > 注意，当actor需要使用llm工具时，需要调用用户自己的llm账号或token，这部分后续展开说。
 

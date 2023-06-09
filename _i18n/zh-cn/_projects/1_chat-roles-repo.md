@@ -1,4 +1,4 @@
-chat-roles-repo提供了一组[restAPI服务](https://chatroles.onrender.com/docs/api#/), 让每一个人都能方便快捷地使用社区共享的chat-roles rolebots。
+chat-roles-repo提供了一组[restAPI服务](https://repo-sandbox.roles.chat/docs/api#/), 让每一个人都能方便快捷地使用社区共享的chat-roles rolebots。
 
 ## chat-roles 有什么用
 
