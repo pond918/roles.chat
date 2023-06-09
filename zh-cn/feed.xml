@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="zh-cn" /><updated>2023-06-09T01:31:14+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">快速了解 chat-roles-repo 服务</title><link href="https://roles.chat/blog/2023/introduction-to-chat-roles-repo/" rel="alternate" type="text/html" title="快速了解 chat-roles-repo 服务" /><published>2023-06-08T13:01:00+00:00</published><updated>2023-06-08T13:01:00+00:00</updated><id>https://roles.chat/blog/2023/introduction-to-chat-roles-repo</id><content type="html" xml:base="https://roles.chat/blog/2023/introduction-to-chat-roles-repo/"><![CDATA[<h2 id="chat-roles-repo-是什么">chat-roles-repo 是什么</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="zh-cn" /><updated>2023-06-09T14:31:47+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">快速了解 chat-roles-repo 服务</title><link href="https://roles.chat/blog/2023/introduction-to-chat-roles-repo/" rel="alternate" type="text/html" title="快速了解 chat-roles-repo 服务" /><published>2023-06-08T13:01:00+00:00</published><updated>2023-06-08T13:01:00+00:00</updated><id>https://roles.chat/blog/2023/introduction-to-chat-roles-repo</id><content type="html" xml:base="https://roles.chat/blog/2023/introduction-to-chat-roles-repo/"><![CDATA[<h2 id="chat-roles-repo-是什么">chat-roles-repo 是什么</h2>
 
 <p>一个chat-roles仓库。在此你可以：</p>
 
@@ -42,7 +42,7 @@
 <p>该role的目标就是啥也不干。系统中用来关联到每个用户（包括你:）。所以你的角色就是，像boss一样，啥也不干 ;)</p>
 
 <blockquote>
-  <p>要创建你自己的chat-roles，请参阅 <a href="https://chatroles.onrender.com/docs/api#/chat-roles">roles API</a></p>
+  <p>要创建你自己的chat-roles，请参阅 <a href="https://repo-sandbox.roles.chat/docs/api#/chat-roles">roles API</a></p>
 </blockquote>
 
 <h3 id="2-chat-role">#2 chat-role</h3>
@@ -121,7 +121,7 @@
 <p>@RR#list意思是将结果发给 RR 的 list 入口。RR 就是接下来要说的，第3个role。</p>
 
 <blockquote>
-  <p>role-host相关的操作，请参阅 <a href="https://chatroles.onrender.com/docs/api#/chat-roles%20implementation">host API</a></p>
+  <p>role-host相关的操作，请参阅 <a href="https://repo-sandbox.roles.chat/docs/api#/chat-roles%20implementation">host API</a></p>
 </blockquote>
 
 <h3 id="3-roles-role">#3 roles-role</h3>
@@ -173,16 +173,16 @@
 <p>简单来说，RR拿到内容后，根据提示语模版(prompt)发给llm，生成该内容相关的professionals和skills，再通过restAPI调用我们的vector database，搜索仓库里所有的chat-roles，返回最匹配的roles list。</p>
 
 <blockquote>
-  <p>该host的详细定义可参阅 <a href="https://chatroles.onrender.com/docs/api#/chat-roles%20implementation/HostsController_findOne">这里</a>，点”Try it out”，id填 roles-role-host</p>
+  <p>该host的详细定义可参阅 <a href="https://repo-sandbox.roles.chat/docs/api#/chat-roles%20implementation/HostsController_findOne">这里</a>，点”Try it out”，id填 roles-role-host</p>
 </blockquote>
 
 <p>终于定义好一个有用的角色了，迫切需要试用一下：</p>
 
 <h3 id="role-actor">role-actor</h3>
 
-<p>要使用一个现有的role，你要为这个role<a href="https://chatroles.onrender.com/docs/api#/chat-actors/ActorsController_create">创建一个actor</a>，</p>
+<p>要使用一个现有的role，你要为这个role<a href="https://repo-sandbox.roles.chat/docs/api#/chat-actors/ActorsController_create">创建一个actor</a>，</p>
 
-<p>然后你就可以和他<a href="https://chatroles.onrender.com/docs/api#/chat-APIs">聊天</a>，或者<a href="https://chatroles.onrender.com/docs/api#/chat-APIs">api调用</a>，集成到你自己的系统中去了。</p>
+<p>然后你就可以和他<a href="https://repo-sandbox.roles.chat/docs/api#/chat-APIs">聊天</a>，或者<a href="https://repo-sandbox.roles.chat/docs/api#/chat-APIs">api调用</a>，集成到你自己的系统中去了。</p>
 
 <blockquote>
   <p>注意，当actor需要使用llm工具时，需要调用用户自己的llm账号或token，这部分后续展开说。</p>
@@ -199,7 +199,7 @@
 <blockquote>
   <p>注意，目前的chat-role-repo是沙箱环境，仅用于测试，您创建的数据随时可能丢失，请做好备份。
 服务还处于alpha阶段，随时开源</p>
-</blockquote>]]></content><author><name>roles.chat</name></author><category term="tag-quick-start" /><category term="tag-services" /><summary type="html"><![CDATA[首个 chat-roles-repo 服务已发布到 (沙箱)[https://chatroles.onrender.com/docs/api#/].]]></summary></entry><entry><title type="html">ChatGPT是否支持树形分支上下文</title><link href="https://roles.chat/blog/2023/does-chatgpt-support-tree-structured-conversation-context/" rel="alternate" type="text/html" title="ChatGPT是否支持树形分支上下文" /><published>2023-05-18T17:47:09+00:00</published><updated>2023-05-18T17:47:09+00:00</updated><id>https://roles.chat/blog/2023/does-chatgpt-support-tree-structured-conversation-context</id><content type="html" xml:base="https://roles.chat/blog/2023/does-chatgpt-support-tree-structured-conversation-context/"><![CDATA[<p>漫长的一个月。。</p>
+</blockquote>]]></content><author><name>roles.chat</name></author><category term="tag-quick-start" /><category term="tag-services" /><summary type="html"><![CDATA[首个 chat-roles-repo 服务已发布到 (沙箱)[https://repo-sandbox.roles.chat/docs/api#/].]]></summary></entry><entry><title type="html">ChatGPT是否支持树形分支上下文</title><link href="https://roles.chat/blog/2023/does-chatgpt-support-tree-structured-conversation-context/" rel="alternate" type="text/html" title="ChatGPT是否支持树形分支上下文" /><published>2023-05-18T17:47:09+00:00</published><updated>2023-05-18T17:47:09+00:00</updated><id>https://roles.chat/blog/2023/does-chatgpt-support-tree-structured-conversation-context</id><content type="html" xml:base="https://roles.chat/blog/2023/does-chatgpt-support-tree-structured-conversation-context/"><![CDATA[<p>漫长的一个月。。</p>
 
 <p>值得庆祝的是，https://repo.roles.chat 服务系统快要beta了~</p>
 
