@@ -57,7 +57,7 @@ projects:
     project5: Project 5
     project6: Project 6
   descriptions:
-    chat-roles-repo: restAPI服务，使用和创建社区中，每个人共享的botroles机器人
+    chat-roles-repo: restAPI服务，使用和创建社区中，每个人共享的rolebots机器人
     project2: a project with a background image
     project3: a project that redirects to another website
     project4: another without an image
