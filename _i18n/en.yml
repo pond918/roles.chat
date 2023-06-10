@@ -65,7 +65,7 @@ projects:
     project5: Project 5
     project6: Project 6
   descriptions:
-    chat-roles-repo: a restAPI service, to leverage / generate rolebots from/to everybody in community
+    chat-roles-repo: a restAPI service, to leverage / generate botroles from/to everybody in community
     project2: a project with a background image
     project3: a project that redirects to another website
     project4: another without an image
