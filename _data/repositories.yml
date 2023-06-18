@@ -1,6 +1,6 @@
 github_users:
 
 github_repos:
-  - pond918/roles.chat
-  - pond918/llm-bots
   - pond918/chatroles-vdb
+  - pond918/llm-bots
+  - pond918/roles.chat
