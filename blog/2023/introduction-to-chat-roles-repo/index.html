@@ -178,7 +178,206 @@
   </header>
 
   <article class="post-content">
-    <p>TBD</p>
+    <h2 id="quick-overview-of-chat-roles-repo-service">Quick Overview of chat-roles-repo Service</h2>
+
+<p>A repository of chat-roles. Here you can:</p>
+
+<ul>
+  <li>Define your own chat-roles.
+    <ul>
+      <li>Your roles can collaborate with other roles, like a team, to accomplish a task.</li>
+    </ul>
+  </li>
+  <li>You can also use existing roles in the repository to achieve your goals.</li>
+  <li>You can directly converse with chat-roles and they will respond like a chatbot.
+    <ul>
+      <li>You can also call chat-roles through the API, similar to web services, to return json data</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-chat-roles-repo-works">How chat-roles-repo works</h2>
+
+<p>Three genesis roles have been predefined in the chat roles-repo：</p>
+
+<ul>
+  <li>do-nothing-role</li>
+  <li>chat-role</li>
+  <li>roles-role</li>
+</ul>
+
+<p>Take them as an example to see how chat-roles work.</p>
+
+<h3 id="1-do-nothing-role">#1 do-nothing-role</h3>
+
+<p>The basic information of this role is as follows:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"nick"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EmptyRole"</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Give</span><span class="w"> </span><span class="err">him</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">nickname</span><span class="w">
+  </span><span class="nl">"goal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Do nothing"</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Each</span><span class="w"> </span><span class="err">role</span><span class="w"> </span><span class="err">has</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">clear</span><span class="w"> </span><span class="err">task</span><span class="w"> </span><span class="err">goal</span><span class="w">
+  </span><span class="nl">"published"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Can</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">used</span><span class="w"> </span><span class="err">after</span><span class="w"> </span><span class="err">publication</span><span class="p">,</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">cannot</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">changed</span><span class="w"> </span><span class="err">after</span><span class="w"> </span><span class="err">publication</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The goal of this role is to do nothing. Used in the system to associate with each user （including you:）.So your character is, like a boss, doing nothing ;)</p>
+
+<blockquote>
+  <p>To create your own chat-roles, please refer to <a href="https://repo-sandbox.roles.chat/docs/api#/chat-roles" rel="external nofollow noopener" target="_blank">roles API</a></p>
+</blockquote>
+
+<h3 id="2-chat-role">#2 chat-role</h3>
+
+<p>The character must do something now，</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"nick"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ChatBot"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"goal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Default role to chat with user in new conversation, with roles recommendations."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"to chat with user purposelessly."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recommend roles during chatting."</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The goal of this role is to chat with users, and during the chat process, recommend relevant experts in chat-roles repo to users to help them solve problems.</p>
+
+<p>To achieve this goal, within each chat role, we need to define a role host to host work execution. Let’s see how to do it:</p>
+
+<h4 id="role-host">role-host</h4>
+
+<p>Now we define a host for the chat role,</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"roleId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chat-role"</span><span class="p">,</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">role</span><span class="w"> </span><span class="err">associated</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">host</span><span class="w">
+    </span><span class="nl">"onEntries"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"handle"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"llm"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"prompt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;&lt;req.prompt&gt;&gt;"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"responses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w"> </span><span class="nl">"then"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@RR#list"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"members"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RR"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hostId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"roles-role-host"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"roleId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"roles-role"</span><span class="p">,</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Simply put, a host contains:</p>
+
+<ul>
+  <li>Several entry points to respond to requests from others</li>
+  <li>Several members to help oneself complete tasks</li>
+</ul>
+
+<p>Specifically, for this host, there is a default entry. When a request for ‘req. prompt’ arrives, it is directly sent to ‘to’: ‘llm’. After receiving the response from llm, it is then sent to ‘to’: ‘@ RR # list’. Finally, the result is returned to the user.</p>
+
+<p>The problem is, what are ‘llm’ and ‘@ RR # list’? They help the host execute specific instructions, which we call partners：</p>
+
+<h5 id="partners">partners</h5>
+
+<p>These are all his partners. There are two types of partners:</p>
+
+<ul>
+  <li>members: Team members, that is, another role</li>
+  <li>tools: Tool plugin，</li>
+</ul>
+
+<p>For example, when you build a car, you need a wrench (tool) and an engineer (member), and the members are all named, so they are hung under “members”.</p>
+
+<p>Llm is a chat-GPT like tool that sends user questions to llm and returns the results，</p>
+
+<blockquote>
+  <p>There are many built-in tools：llm, restAPI, json, db.. Developers can apply to register more tool plugins</p>
+</blockquote>
+
+<p>@RR # list means to send the results to the list entry of RR. RR is the third role to be discussed next.</p>
+
+<blockquote>
+  <p>For role-host related operations, please refer to <a href="https://repo-sandbox.roles.chat/docs/api#/chat-roles%20implementation" rel="external nofollow noopener" target="_blank">host API</a></p>
+</blockquote>
+
+<h3 id="3-roles-role">#3 roles-role</h3>
+
+<p>Check the information：</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"nick"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RolesRole"</span><span class="p">,</span><span class="w"> </span><span class="err">//As</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">name</span><span class="w"> </span><span class="err">suggests</span><span class="p">,</span><span class="w"> </span><span class="err">recommend</span><span class="w"> </span><span class="err">roles</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">roles</span><span class="w">
+  </span><span class="nl">"goal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"To recommend suitable professional roles to help for user's question/topic/task."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"has knowledge of all roles on roles.chat site."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ability to understand user question/topic/task."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ability to match best professional roles for the task to user."</span><span class="p">,</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"professionals"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"task assistant"</span><span class="p">,</span><span class="w"> </span><span class="s2">"experts recommender"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"entries"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{},</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">default</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="err">response</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w"> </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p>Note that when creating your own roles, please accurately describe “goal,” “skills,” and “professionals,” so that RolesRole can recommend your roles to those in need.</p>
+</blockquote>
+
+<p>This role has 2 entrances, and the default entrance does nothing; The entry “list” is responsible for recommending relevant roles to users based on the received content. The host is as follows：</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">{</span>
+  <span class="s2">"roleId"</span>: <span class="s2">"roles-role"</span>,
+  <span class="s2">"handle"</span>: <span class="o">{</span>
+    <span class="s2">"to"</span>: <span class="s1">'llm'</span>,
+    <span class="s2">"prompt"</span>:
+      <span class="s1">'which professionals(exclude translators) are qualified to help answering the following question?(reply in most strict json list in english:[{"professional":"val", "goal":"val", "special skills":"val"}]):\n&lt;&lt;req.prompt&gt;&gt;'</span>,
+    <span class="s2">"responses"</span>: <span class="o">[</span>
+      <span class="o">{</span> <span class="s2">"then"</span>: <span class="o">{</span> <span class="s2">"to"</span>: <span class="s2">"json"</span> <span class="o">}</span> <span class="o">}</span>,
+      <span class="o">{</span>
+        ...
+        <span class="s2">"to"</span>: <span class="sb">`</span>restAPI:POST <span class="k">${</span><span class="nv">process</span><span class="p">.env.API_CR_VDB</span><span class="k">}</span>/run/predict_1<span class="sb">`</span>
+        ...
+      <span class="o">}</span>
+    <span class="o">]</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Simply put, after RR receives the content, it sends it to llm based on the prompt template, generates relevant professionals and skills for the content, and then calls our vector database through the rest API to search for all chat-roles in the warehouse and return the most matching role list.</p>
+
+<blockquote>
+  <p>The detailed definition of this host can be found in <a href="https://repo-sandbox.roles.chat/docs/api#/chat-roles%20implementation/HostsController_findOne" rel="external nofollow noopener" target="_blank">Here</a>，Click on”Try it out”，fill in the id as roles-role-host</p>
+</blockquote>
+
+<p>I have finally defined a useful role and urgently need to try it out：</p>
+
+<h3 id="role-actor">role-actor</h3>
+
+<p>To use an existing role, you need to<a href="https://repo-sandbox.roles.chat/docs/api#/chat-actors/ActorsController_create" rel="external nofollow noopener" target="_blank">create an actor</a>，</p>
+
+<p>Then you can [chat] with him(https://repo-sandbox.roles.chat/docs/api#/chat-APIs)，or<a href="https://repo-sandbox.roles.chat/docs/api#/chat-APIs" rel="external nofollow noopener" target="_blank">API calls</a>，Integrated into your own system.</p>
+
+<blockquote>
+  <p>Note that when an actor needs to use the llm tool, they need to call the user’s own llm account or token, which will be further elaborated in this section.
+Of course, all of these are currently provided using APIs. If there were a convenient client tool to use these functions, it would be perfect. Stay tuned~</p>
+</blockquote>
+
+<h2 id="summarize">Summarize</h2>
+
+<p>Through the above three examples, we briefly introduced how to define a chat role and have them collaborate with each other.
+Try creating your own roles team and unleash the powerful power of llm!</p>
+
+<blockquote>
+  <p>Note that the current chat role repo is a sandbox environment and is only used for testing. The data you create may be lost at any time, please make a backup.
+The service is still in the alpha phase and is open source at any time</p>
+</blockquote>
 
   </article>
 
