@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="zh-cn" /><updated>2023-06-18T05:17:29+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">快速了解 chat-roles-repo 服务</title><link href="https://roles.chat/blog/2023/introduction-to-chat-roles-repo/" rel="alternate" type="text/html" title="快速了解 chat-roles-repo 服务" /><published>2023-06-08T13:01:00+00:00</published><updated>2023-06-08T13:01:00+00:00</updated><id>https://roles.chat/blog/2023/introduction-to-chat-roles-repo</id><content type="html" xml:base="https://roles.chat/blog/2023/introduction-to-chat-roles-repo/"><![CDATA[<h2 id="chat-roles-repo-是什么">chat-roles-repo 是什么</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://roles.chat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://roles.chat/" rel="alternate" type="text/html" hreflang="zh-cn" /><updated>2024-05-15T05:40:13+00:00</updated><id>https://roles.chat/feed.xml</id><title type="html">roles.chat</title><author><name>roles.chat</name></author><entry><title type="html">roles.chat新成员 - Callgent.com</title><link href="https://roles.chat/blog/2024/proud-to-announce-callgent.com/" rel="alternate" type="text/html" title="roles.chat新成员 - Callgent.com" /><published>2024-05-15T05:23:00+00:00</published><updated>2024-05-15T05:23:00+00:00</updated><id>https://roles.chat/blog/2024/proud-to-announce-callgent.com</id><content type="html" xml:base="https://roles.chat/blog/2024/proud-to-announce-callgent.com/"><![CDATA[<p>我们非常兴奋地向大家介绍我们最新的创新成果: <a href="https://callgent.com">Callgent.com</a>。这是一个AI驱动的iPaaS(Integration Platform as a Service)平台,它将彻底改变您的服务与用户和系统交互的方式。</p>
+
+<p>在Roles.chat,我们的使命是帮助您”与AI角色聊天,它们会完成任务”。而通过Callgent,我们将这一愿景更进一步,将您的服务封装成一个可调用的agent,打破用户和系统之间的障碍。</p>
+
+<h2 id="callgentcom-重磅来袭">Callgent.com 重磅来袭</h2>
+
+<p>Callgent.com建立在简化和优化用户与系统之间通信的前提之上。通过将您的服务封装到一个callgent中,您可以让它通过电子邮件、Slack频道,甚至是代码库和REST API与用户进行交互。</p>
+
+<p>当callgent将这些请求转换为可执行的调用,并将其发送到您的API服务或Slack用户以获得响应时,神奇的事情就发生了。这种开创性的方法为无缝通信和协作开辟了一个充满可能性的世界。</p>
+
+<h2 id="ai在集成中的强大力量">AI在集成中的强大力量</h2>
+
+<p>Callgent.com的AI能力使其在iPaaS领域成为一个游戏规则改变者。通过利用先进的AI算法,Callgent.com可以理解和解释用户请求,确保准确和及时的响应。这消除了人工干预的需要,并显著降低了人为错误的可能性。</p>
+
+<h2 id="打破障碍">打破障碍</h2>
+
+<p>Callgent.com的愿景是打破所有系统和用户之间的障碍。通过提供一个促进无缝通信和集成的平台,我们的目标是彻底改变企业的运营方式。无论是组织内部的不同部门之间,还是企业与客户之间,Callgent.com都将使沟通更加容易和高效。</p>
+
+<h2 id="加入这场革命">加入这场革命</h2>
+
+<p>我们邀请您与我们一起踏上这段激动人心的旅程。探索Callgent.com如何改变您的业务运营,将沟通提升到一个新的水平。立即访问<a href="https://callgent.com">Callgent.com</a>,开始将您的服务封装到callgents中。让我们一起打破那些孤岛吧!</p>]]></content><author><name>roles.chat</name></author><category term="tag-quick-start" /><category term="tag-services" /><summary type="html"><![CDATA[探索 Callgent.com 如何通过其创新的 AI 驱动的 iPaaS 服务打破用户和系统之间的障碍。将您的服务封装到 callgent 中,彻底革新跨平台的通信方式。]]></summary></entry><entry><title type="html">快速了解 chat-roles-repo 服务</title><link href="https://roles.chat/blog/2023/introduction-to-chat-roles-repo/" rel="alternate" type="text/html" title="快速了解 chat-roles-repo 服务" /><published>2023-06-08T13:01:00+00:00</published><updated>2023-06-08T13:01:00+00:00</updated><id>https://roles.chat/blog/2023/introduction-to-chat-roles-repo</id><content type="html" xml:base="https://roles.chat/blog/2023/introduction-to-chat-roles-repo/"><![CDATA[<h2 id="chat-roles-repo-是什么">chat-roles-repo 是什么</h2>
 
 <p>一个chat-roles仓库。在此你可以：</p>
 
