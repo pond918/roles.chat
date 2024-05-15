@@ -58,19 +58,13 @@ posts:
 
 projects:
   titles:
+    callgent: Callgent.com
     chat-roles-repo: chat-roles Repo
-    project2: Project 2
-    project3: Project 3
-    project4: Project 4
-    project5: Project 5
-    project6: Project 6
+    chatroles-vdb: chatroles-vdb
   descriptions:
+    callgent: Service as a Callable Agent, an AI-powered iPaaS Cloud service
     chat-roles-repo: a restAPI service, to leverage / generate rolebots from/to everybody in community
-    project2: a project with a background image
-    project3: a project that redirects to another website
-    project4: another without an image
-    project5: a project with a background image
-    project6: a project with no image
+    chatroles-vdb: a language embedding vdb API service deployed on huggingface
   categories:
     fun: fun
     work: work

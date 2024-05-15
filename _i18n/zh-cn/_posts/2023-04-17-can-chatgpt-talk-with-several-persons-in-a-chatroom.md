@@ -2,7 +2,7 @@
 layout: post
 title: ChatGPT支持多人同时聊天吗
 date: 2023-04-17 21:41:00+0800
-description: 在多人聊天场合，尝试让ChatGPT别插嘴，能成功吗。
+description: 在多人聊天场合，尝试让ChatGPT别插嘴, 能成功吗。
 tags: tag-prompt-skills
 giscus_comments: true
 related_posts: true

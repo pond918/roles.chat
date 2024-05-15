@@ -2,7 +2,7 @@
 layout: post
 title: ChatGPT是否支持树形分支上下文
 date: 2023-05-19 01:47:09+0800
-description: 随着聊天的深入，会出现越来越多分支子话题，ChatGPT是否支持分支上下文呢？实验揭晓。
+description: 随着聊天的深入, 会出现越来越多分支子话题，ChatGPT是否支持分支上下文呢？实验揭晓。
 tags: tag-prompt-skills
 giscus_comments: true
 related_posts: true

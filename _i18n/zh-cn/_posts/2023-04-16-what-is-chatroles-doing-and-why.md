@@ -2,7 +2,7 @@
 layout: post
 title: ChatRoles是什么，有什么用
 date: 2023-04-16 08:35:00+0800
-description: 简单介绍ChatRoles如何工作，对我们有什么用，以及我们如何使用它。
+description: 简单介绍ChatRoles如何工作, 对我们有什么用，以及我们如何使用它。
 tags: tag-quick-start
 categories: quick-start
 giscus_comments: true
