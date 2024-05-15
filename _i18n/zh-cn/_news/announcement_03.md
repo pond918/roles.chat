@@ -1,2 +1,2 @@
 
-自豪地宣布我们的新成员： [Callgent.com](https://www.callgent.com/) :boom: :sparkles:
+自豪地宣布我们的新Role： [Callgent.com](https://www.callgent.com/) :boom: :sparkles:
